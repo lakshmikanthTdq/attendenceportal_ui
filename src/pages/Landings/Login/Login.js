@@ -1,14 +1,53 @@
-import React from "react";
+import {React, useState} from "react";
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
+import { GoPersonFill } from "react-icons/go";
+import { BiSolidLock } from "react-icons/bi";
+import { Input  } from 'antd';
+import { Checkbox } from 'antd';
 
 function Login() {
+
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const navigate = useNavigate();
+
+  const onChange = (e) => {
+    console.log(`checked = ${e.target.checked}`);
+  };
+
   return (
-    <>
-      <h1>Login</h1>
-      <Button type="primary" onClick={() => {navigate("/layout/landing")}}>Goto Main</Button>
-    </>
+      <div className="loginbackground">
+        <div>
+          <h1>Welcome !</h1>
+          {/* <Button type="primary" onClick={() => { navigate("/layout/landing") }}>Goto Main</Button> */}
+        </div>
+        <div>
+          <section className="fieldssection">
+            <img src="/assests/loginusericon.svg"></img>
+            <h1>Log In</h1>
+            <form>
+            <label for=""></label>
+            <Input size="large" placeholder="Email Address" prefix={<GoPersonFill fontSize={"24px"}/>} />
+            <br />
+            <br />
+           <Input.Password prefix={<BiSolidLock fontSize={"24px"}/>}
+           size="large"
+           placeholder="Password"
+           visibilityToggle={{ 
+           visible: passwordVisible,
+           onVisibleChange: setPasswordVisible,
+           }}
+           />
+            </form>
+          </section>
+           <section className="rememberforgotsec">
+            <Checkbox onChange={onChange} style={{fontSize:"16px"}}>Remember me</Checkbox>
+            <a href="">Forgot password</a>
+            </section>
+            <Button type="" className="logbtn" onClick={() => {navigate("/layout/customermanagement/view")}}>Log In</Button>
+        </div>
+      </div>
   );
 }
 
