@@ -34,8 +34,8 @@
 section.fieldssection {
     margin-top: 26%;
 }
-section.fieldssection h1{
-    margin-bottom: 40px;
+section.fieldssection h2{
+    margin:20px 0 40px 0;
 }
 section.fieldssection form{
     width: 50%;
@@ -47,8 +47,11 @@ section.fieldssection form input{
 section.rememberforgotsec{
     margin-top: 25px;
     display: flex;
-    gap: 235px;
+    gap: 218px;
     margin-left: 240px;
+}
+section.rememberforgotsec a{
+    color: #9E9E9E;
 }
 
 .logbtn{
@@ -59,5 +62,25 @@ section.rememberforgotsec{
     border-radius: 10px;
     opacity: 1;
     color: #fff;
-    height: 50px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 992px) and (min-width:768px){
+    .loginbackground div:last-child{
+        border-radius: 0px 0px ;
+        width: 70%;
+    }
+    section.rememberforgotsec{
+        margin-left: 75px;
+        gap: 80px;
+    }
+    section.fieldssection form{
+        width: 70%;
+    }
+    .logbtn{
+        width:340px;
+    }
 }

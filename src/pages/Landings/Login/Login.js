@@ -25,7 +25,7 @@ function Login() {
         <div>
           <section className="fieldssection">
             <img src="/assests/loginusericon.svg"></img>
-            <h1>Log In</h1>
+            <h2>Log In</h2>
             <form>
             <label for=""></label>
             <Input size="large" placeholder="Email Address" prefix={<GoPersonFill fontSize={"24px"}/>} />
@@ -42,10 +42,10 @@ function Login() {
             </form>
           </section>
            <section className="rememberforgotsec">
-            <Checkbox onChange={onChange} style={{fontSize:"16px"}}>Remember me</Checkbox>
-            <a href="">Forgot password</a>
+            <Checkbox onChange={onChange} style={{fontSize:"16px",color: "#9E9E9E"}}>Remember me</Checkbox>
+            <a href="">Forgot password?</a>
             </section>
-            <Button type="" className="logbtn" onClick={() => {navigate("/layout/customermanagement/view")}}>Log In</Button>
+            <Button type="" className="logbtn" onClick={() => {navigate("/layout/landing")}}>Log In</Button>
         </div>
       </div>
   );
