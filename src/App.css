@@ -23,11 +23,17 @@
 }
 .profilesettingsmenuicons {
    display: flex;
-   gap: 15px;
+   gap: 40px;
    padding-right: 40px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
-
+.profilesettingsmenuicons span{
+    /* display: block; */
+    margin-top: 41px;
+    margin-bottom: 1rem;
+    margin-left: -76px;
+    color: #FFFFFF;
+}
 .notification.active + span {
     width: 15px;
     height: 15px;
@@ -38,4 +44,67 @@
     position: absolute;
     margin-left: -17px;
     border: 2px solid #1a2b6d;
+    margin-top: -40px;
+}
+
+/* landing page */
+.landing{
+    position: relative;
+    margin-top: 5px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.widgets{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 80px;
+}
+.card{
+    width: 200px;
+height: 200px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 3px #0000002E;
+border-radius: 10px;
+opacity: 1;
+cursor: pointer;
+}
+.card:hover{
+    background-color: #1A2B6D;
+}
+.card img:hover{
+    background: #FFFFFF;
+}
+
+
+.card p{
+    margin-top: 15px;
+    margin-left: 10px ;
+    text-align: center !important;
+}
+.card:hover p{
+    color: #FFFFFF;
+}
+
+/* .card p.cardtext{
+    margin-left: 70px;
+} */
+
+.arrow{
+    position: absolute;
+    top: 70%;
+    left: 75%;
+}
+.card:hover  .svgimages svg path, .card:hover .svgimages svg circle  {
+    fill: #FFFFFF;
+}
+
+.svgimages  {
+    height: 82px;
+    width: 82px;
+    margin-top: 40px;
+    margin-left: 60px
 }

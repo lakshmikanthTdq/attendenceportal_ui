@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom'
 import { BiSolidBell } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import { IoPersonCircle } from "react-icons/io5";
@@ -17,11 +16,12 @@ function Header() {
       </div>
       <div className="profilesettingsmenuicons">
       <span style={{position: "relative"}}>
-        <BiSolidBell style={{color: "#FFFFFF", fontSize: "35px"}} className="notification active"/>
+        <BiSolidBell style={{color: "#FFFFFF", fontSize: "30px",marginTop:"-76px"}} className="notification active"/>
         <span></span>
       </span>
       <IoMdSettings style={{color: "#FFFFFF", fontSize: "30px"}}/>
       <IoPersonCircle style={{color: "#FFFFFF", fontSize: "30px"}}/>
+       <span>Profile</span>
      
       {/* <span>profile</span> */}
       </div>
