@@ -6,8 +6,10 @@ function Layout() {
   
   return (
     <>
+     <div style={{backgroundColor:"#D41317"}}>
       <Header />
       <Outlet />
+      </div>
     </>
   );
 }

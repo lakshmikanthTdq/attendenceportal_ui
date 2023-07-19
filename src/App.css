@@ -1,0 +1,41 @@
+.header{
+    width: 100%;
+    background-color: #1A2B6D !important;
+    height: 103px;
+    margin-top: -16px;
+    border-bottom-left-radius :30px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tdqimage{
+   
+    margin-top: 37px;
+    width: 102px;
+}
+
+.tdqlogobackground{
+    background-color: #FFFFFF;
+    height: 103px;
+    width: 215px;
+    border-bottom-left-radius :30px ;
+    text-align: center;
+}
+.profilesettingsmenuicons {
+   display: flex;
+   gap: 15px;
+   padding-right: 40px;
+    margin-top: 10px;
+}
+
+.notification.active + span {
+    width: 15px;
+    height: 15px;
+    background: red;
+    z-index: 1;
+    display: inline-flex;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -17px;
+    border: 2px solid #1a2b6d;
+}
