@@ -1,21 +1,68 @@
-.addicon{
-    font-size: 35px !important;
-    color: #1A2B6D;
+.addicon {
+  font-size: 35px !important;
+  color: #1a2b6d;
 }
-.useraddicontxt{
-    margin-top: 0px;
+.useraddicontxt {
+  margin-top: 0px;
 }
-.savebtn1{
-    margin-top: 35px;
-    width:350px;
-    background: #1A2B6D 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 20px;
-    opacity: 1;
-    color: #fff;
-    height: 60px;
-    font-size: 20px;
+.savebtn1 {
+  margin-top: 35px;
+  width: 350px;
+  background: #1a2b6d 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+  color: #fff;
+  height: 60px;
+  font-size: 20px;
 }
-.salariessidepannel{
-    margin-bottom: 35px;
+.salariessidepannel {
+  margin-bottom: 35px;
 }
+
+.datepicker:hover {
+  border: 1px solid #1a2b6d;
+}
+
+.salarybuttons {
+  margin-left: 1355px;
+}
+
+.seesummarybtn {
+  height: 45px;
+  border: 2px solid #1a2b6d;
+  color: #1a2b6d;
+  text-align: left;
+  font: "Nunito";
+  letter-spacing: 0px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.finalisepayrollbtn {
+  height: 45px;
+  border: 2px solid #1a2b6d;
+  color: #1a2b6d;
+  text-align: left;
+  font: "Nunito";
+  letter-spacing: 0px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.finalisepayrollbtn:hover {
+  color: #ffffff !important;
+  background-color: #1a2b6d;
+
+  font: "Nunito";
+  letter-spacing: 0px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* /////////// need to discuss /////////////////// */
+:where(.css-dev-only-do-not-override-1m62vyb).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  color: #1a2b6d;
+  border-color: #1a2b6d;
+}
+/* //////////////////////////// */
