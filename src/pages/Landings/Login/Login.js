@@ -20,7 +20,6 @@ function Login() {
       <div className="loginbackground">
         <div>
           <h1>Welcome !</h1>
-          {/* <Button type="primary" onClick={() => { navigate("/layout/landing") }}>Goto Main</Button> */}
         </div>
         <div>
           <section className="fieldssection">
@@ -43,7 +42,7 @@ function Login() {
           </section>
            <section className="rememberforgotsec">
             <Checkbox onChange={onChange} style={{fontSize:"16px",color: "#9E9E9E"}}>Remember me</Checkbox>
-            <a href="">Forgot password?</a>
+            <a href="/verifyotp">Forgot password?</a>
             </section>
             <Button type="" className="logbtn" onClick={() => {navigate("/layout/landing")}}>Log In</Button>
         </div>
