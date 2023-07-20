@@ -2,39 +2,57 @@ import React from "react";
 import { BiSolidBell } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import { IoPersonCircle } from "react-icons/io5";
-
-
-
+import { useNavigate } from "react-router-dom";
+import { Avatar, Dropdown, Badge, Space } from "antd";
 
 function Header() {
-  
+  const navigate = useNavigate();
+  const items = [
+    {
+      key: "1",
+      label: (
+        <a
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          logout
+        </a>
+      ),
+    },
+  ];
   return (
-   
     <div className="header">
       <div className="tdqlogobackground">
-      <img src="/assests/tdqlogo.png" alt="logo" className="tdqimage" />
+        <img
+          src="/assests/tdqlogo.png"
+          alt="logo"
+          className="tdqimage"
+          onClick={() => {
+            navigate("/layout/landing");
+          }}
+        />
       </div>
-      <div className="profilesettingsmenuicons">
-      <span style={{position: "relative"}}>
-        <BiSolidBell style={{color: "#FFFFFF", fontSize: "30px",marginTop:"-76px"}} className="notification active"/>
-        <span></span>
-      </span>
-      <IoMdSettings style={{color: "#FFFFFF", fontSize: "30px"}}/>
-      <IoPersonCircle style={{color: "#FFFFFF", fontSize: "30px"}}/>
-       <span>Profile</span>
-     
-      {/* <span>profile</span> */}
-      </div>
-      {/* temporory purpose */}
-      {/* <nav>
-        <Link style={{margin: "0 37px"}} to="/layout/customermanagement/view">Customer Management</Link>
-        <Link style={{margin: "0 37px"}} to="/layout/employees/view">Employees</Link>
-        <Link style={{margin: "0 37px"}} to="/layout/attendance/view">Attendance</Link>
-        <Link style={{margin: "0 37px"}} to="/layout/reports/view">Reports</Link>
-        <Link style={{margin: "0 37px"}} to="/layout/salaries/view">Salaries</Link>
-      </nav> */}
+      <Space size="large">
+        <Badge count={5}>
+          
+          <BiSolidBell style={{ color: "#FFFFFF", fontSize: "30px" }} />
+        </Badge>
+        <IoMdSettings style={{ color: "#FFFFFF", fontSize: "30px" }} />
+        <Dropdown
+          menu={{
+            items,
+          }}
+        >
+          <a onClick={(e) => e.preventDefault()}>
+            <Space>
+              <IoPersonCircle style={{ color: "#FFFFFF", fontSize: "30px" }} />
+            </Space>
+          </a>
+        </Dropdown>
+        <div></div>
+      </Space>
     </div>
-   
   );
 }
 

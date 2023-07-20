@@ -9,7 +9,7 @@
     align-items: center;
 }
 .tdqimage{
-   
+   cursor: pointer;
     margin-top: 37px;
     width: 102px;
 }
@@ -21,31 +21,8 @@
     border-bottom-left-radius :30px ;
     text-align: center;
 }
-.profilesettingsmenuicons {
-   display: flex;
-   gap: 40px;
-   padding-right: 40px;
-    margin-top: 40px;
-}
-.profilesettingsmenuicons span{
-    /* display: block; */
-    margin-top: 41px;
-    margin-bottom: 1rem;
-    margin-left: -76px;
-    color: #FFFFFF;
-}
-.notification.active + span {
-    width: 15px;
-    height: 15px;
-    background: red;
-    z-index: 1;
-    display: inline-flex;
-    border-radius: 50%;
-    position: absolute;
-    margin-left: -17px;
-    border: 2px solid #1a2b6d;
-    margin-top: -40px;
-}
+
+
 
 /* landing page */
 .landing{
@@ -78,8 +55,6 @@ cursor: pointer;
 .card img:hover{
     background: #FFFFFF;
 }
-
-
 .card p{
     margin-top: 15px;
     margin-left: 10px ;
@@ -88,10 +63,6 @@ cursor: pointer;
 .card:hover p{
     color: #FFFFFF;
 }
-
-/* .card p.cardtext{
-    margin-left: 70px;
-} */
 
 .arrow{
     position: absolute;

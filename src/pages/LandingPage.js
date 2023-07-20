@@ -130,7 +130,7 @@ function LandingPage() {
 
           <p>Employees</p>
         </div>
-        <div className="card" onClick={() => {navigate('/layout/customermanagement/view')}}>
+        <div className="card" onClick={() => {navigate('/layout/attendance/view')}}>
           <div className="svgimages" alt="attendance">
           <svg xmlns="http://www.w3.org/2000/svg" width="78.179" height="73.064" viewBox="0 0 78.179 73.064">
   <g id="_001-calendar" data-name="001-calendar" transform="translate(-1 -2)">
@@ -141,7 +141,7 @@ function LandingPage() {
 
           <p>Attendance</p>
         </div>
-        <div className="card" onClick={() => {navigate('/layout/customermanagement/view')}}>
+        <div className="card" onClick={() => {navigate('/layout/reports/view')}}>
           <div className="svgimages" alt="reports">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +185,7 @@ function LandingPage() {
           </div>
           <p>Reports</p>
         </div>
-        <div className="card" onClick={() => {navigate('/layout/customermanagement/view')}}>
+        <div className="card" onClick={() => {navigate('/layout/salaries/view')}}>
           <div className="svgimages" alt="salaries">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -8,7 +8,9 @@ function Layout() {
     <>
      <div style={{backgroundColor:"#D41317"}}>
       <Header />
-      <Outlet />
+      <div style={{background: "#fff", marginTop: "10px"}}>
+        <Outlet />
+      </div>
       </div>
     </>
   );
