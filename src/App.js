@@ -6,7 +6,7 @@ import Layout from './pages/Layout';
 import LandingPage from './pages/LandingPage';
 import CustomermanagementView from './pages/CustomerManagement/CustomerManagementView';
 import EmployeeView from './pages/Employees/EmployeesView';
-import Attendance from './pages/Employees/EmployeesView';
+import AttendanceView from './pages/Attendance/AttendanceView';
 import Reports from './pages/Reports/Reports';
 import Salaries from './pages/Salaries/Salaries';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
@@ -24,7 +24,7 @@ function App() {
         <Route path="landing" element={<LandingPage />} />
         <Route path="customermanagement/view" element={<CustomermanagementView />} />
         <Route path="employees/view" element={<EmployeeView />} />
-        <Route path="attendance/view" element={<Attendance />} />
+        <Route path="attendance/view" element={<AttendanceView />} />
         <Route path="reports/view" element={<Reports />} />
         <Route path="salaries/view" element={<Salaries />} />
       </Route>
