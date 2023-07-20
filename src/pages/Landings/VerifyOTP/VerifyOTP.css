@@ -35,17 +35,13 @@
 
 .otpfield{
     margin-top: 350px;
-}
-.otpfield input{
-    margin: 50px 0;
-    height: 50px;
-    width: 50%;
+
 }
 
 .otpboxes{
    
-   
 }
+
 .resendotpsec{
     display: flex;
     justify-content: center;
