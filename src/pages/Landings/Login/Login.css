@@ -7,6 +7,7 @@
     vertical-align: center;
     position: relative;
     justify-items: center;
+
 }
 
 .loginbackground div:first-child{
@@ -23,7 +24,7 @@
     border-radius: 580px 0 0;
     height: 100vh;
     text-align: center;
-    
+    align-items: center;
 }
 
 .loginbackground div:first-child h1{
@@ -46,9 +47,13 @@ section.fieldssection form input{
 }
 section.rememberforgotsec{
     margin-top: 25px;
+    margin-left: 25%;
     display: flex;
-    gap: 218px;
-    margin-left: 240px;
+    width: 70%;
+    gap: 30%;
+    align-items: center;
+    justify-content: left;
+   
 }
 section.rememberforgotsec a{
     color: #9E9E9E;
@@ -74,13 +79,68 @@ section.rememberforgotsec a{
         width: 70%;
     }
     section.rememberforgotsec{
-        margin-left: 75px;
-        gap: 80px;
+        flex-direction: column;
+        margin-left: 0%;
+        gap: 10px;
     }
     section.fieldssection form{
         width: 70%;
     }
     .logbtn{
-        width:340px;
+        width:320px;
+    }
+    .loginbackground div:first-child h1{
+        color: #fff;
+        font: normal normal 800 42px/78px Nunito;
+    }
+}
+@media screen and (max-width: 768px) and (min-width:576px){
+    .loginbackground div:last-child{
+        border-radius: 0px 0px ;
+        width: 70%;
+    }
+    section.rememberforgotsec{
+        flex-direction: column;
+        margin-left: 0%;
+        gap: 10px;
+    }
+    section.fieldssection form{
+        width: 70%;
+    }
+    .logbtn{
+        width:320px;
+    }
+    .loginbackground div:first-child h1{
+        color: #fff;
+        font: normal normal 800 42px/78px Nunito;
+    }
+}
+@media screen and (max-width:576px){
+    .loginbackground div:last-child{
+        border-radius: 0px 0px ;
+        width: 100% !important;
+    }
+    section.rememberforgotsec{
+        flex-direction: column;
+        margin-left: 0%;
+        gap: 10px;
+    }
+    section.fieldssection form{
+        width: 70%;
+    }
+    .logbtn{
+        width:320px;
+    }
+    .loginbackground div:first-child h1 {
+        display: none;
+    }
+    .loginbackground div:first-child {
+        display: none;
+    }
+    section.fieldssection form input{
+        height: 28px;
+    }
+    section.rememberforgotsec a{
+        display: none;
     }
 }
