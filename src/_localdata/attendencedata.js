@@ -1,4 +1,4 @@
-const attendenceDailycolumns = [
+export const attendenceDailycolumns = [
     {
         title: 'Name',
         dataIndex: 'name',
@@ -50,33 +50,33 @@ const attendenceDailycolumns = [
 ];
 
 
-const attendenceDailyData = [
+export const attendenceDailyData = [
     {
         key: '1',
         name: 'Chandu',
         type: 'FULL TIME',
-        clockin:'02:03 PM',
-        clockout:'02:30 PM',
-        loggedhours:'6 Hours',
-        action:'',
+        clockin: '02:03 PM',
+        clockout: '02:30 PM',
+        loggedhours: '6 Hours',
+        action: '',
 
     },
     {
         key: '2',
         name: 'Chandu',
         type: 'FULL TIME',
-        clockin:'12:00 AM',
-        clockout:'12:00 AM',
-        loggedhours:'8 Hours',
-        action:'',
+        clockin: '12:00 AM',
+        clockout: '12:00 AM',
+        loggedhours: '8 Hours',
+        action: '',
     },
     {
         key: '3',
         name: 'Chandu',
         type: 'FULL TIME',
-        clockin:'02:30 PM',
-        clockout:'02:30 PM',
-        loggedhours:'1 Hours',
-        action:'',
+        clockin: '02:30 PM',
+        clockout: '02:30 PM',
+        loggedhours: '1 Hours',
+        action: '',
     }
 ];

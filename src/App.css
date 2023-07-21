@@ -1,38 +1,37 @@
-.header{
+.header {
     width: 100%;
     background-color: #1A2B6D !important;
     height: 103px;
     margin-top: -16px;
-    border-bottom-left-radius :30px ;
+    border-bottom-left-radius: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.tdqimage{
-   cursor: pointer;
+
+.tdqimage {
+    cursor: pointer;
     margin-top: 37px;
     width: 102px;
 }
 
-.tdqlogobackground{
+.tdqlogobackground {
     background-color: #FFFFFF;
     height: 103px;
     width: 215px;
-    border-bottom-left-radius :30px ;
+    border-bottom-left-radius: 30px;
     text-align: center;
 }
 
-
-
 /* landing page */
-.landing{
+.landing {
     position: relative;
     margin-top: 5px;
     width: 100vw;
     height: 100vh;
 }
 
-.widgets{
+.widgets {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -40,42 +39,62 @@
     display: flex;
     gap: 80px;
 }
-.card{
+
+.card {
     width: 200px;
-height: 200px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 0px 3px #0000002E;
-border-radius: 10px;
-opacity: 1;
-cursor: pointer;
+    height: 200px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 3px #0000002E;
+    border-radius: 10px;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .30s ease-in-out;
 }
-.card:hover{
+
+.card:hover {
     background-color: #1A2B6D;
 }
-.card img:hover{
+
+.card img:hover {
     background: #FFFFFF;
 }
-.card p{
+
+.card p {
     margin-top: 15px;
-    margin-left: 10px ;
+    margin-left: 10px;
     text-align: center !important;
 }
-.card:hover p{
+
+.card:hover p {
     color: #FFFFFF;
 }
 
-.arrow{
+.arrow {
     position: absolute;
     top: 70%;
     left: 75%;
 }
-.card:hover  .svgimages svg path, .card:hover .svgimages svg circle  {
+
+.card:hover .svgimages svg path,
+.card:hover .svgimages svg circle {
     fill: #FFFFFF;
 }
 
-.svgimages  {
+.svgimages {
     height: 82px;
     width: 82px;
     margin-top: 40px;
     margin-left: 60px
+}
+
+.ant-table-wrapper table tr th.ant-table-selection-column::after {
+    background-color: inherit !important;
+}
+
+.addbuss{
+    display: inline-block;
+}
+
+.tablecard .ant-tabs-nav{
+    margin-top: -51px!important;
 }

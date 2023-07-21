@@ -8,87 +8,73 @@ import { Select, Space } from 'antd';
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import RightsidePannel from '../RightsidePannel/RightsidePannel'
-
-
+import { DynamicTable } from '../../components/DynamicTable/DynamicTable';
 
 
 function EmployeesView() {
 
-  const [isRightsidePannel, setIsRightsidePannel] = useState(true);
+  const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const navigate = useNavigate();
-  
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-  };
+
   const onReceivePropsHandler = (pannel, load) => {
-      if (load === "getFetch") {
-          setIsRightsidePannel(pannel);
-      } else if (load === "close") {
-          setIsRightsidePannel(pannel);
-      }
+    if (load === "getFetch") {
+      setIsRightsidePannel(pannel);
+    } else if (load === "close") {
+      setIsRightsidePannel(pannel);
+    }
   }
-  
+
   return (
     <>
-    <div >
-      <Space size="small" className="employetext">
-   <GoPersonFill style={{ color: "#D41317", fontSize: "30px" }}/>
-   <p>EMPLOYEE</p>
-    </Space>
-    </div>
-    <div>
+      <div >
+        <Space size="small" className="employetext">
+          <GoPersonFill style={{ color: "#D41317", fontSize: "30px" }} />
+          <p>EMPLOYEE</p>
+        </Space>
+      </div>
+      <div>
         <div className='addbuss'
-        style={{ display: "flex", height: "34px", gap: "10px" }}
-        onClick={() => setIsRightsidePannel(true)}
-      >
-         <IoAddCircle  className='addicon'/>
-        <h4 className="addnewdocumenttext">Add Employee</h4>
+          onClick={() => setIsRightsidePannel(true)}
+        >
+          <IoAddCircle className='addicon' />
+          <h4 className="addnewdocumenttext">Add Employee</h4>
+        </div>
+        
+        {isRightsidePannel ? (
+          <RightsidePannel
+            componentData={
+              <ComponentRenderData
+                onReceivechildProps={onReceivePropsHandler}
+              />
+            }
+            componentLayout={pannelobj}
+            onReceiveProps={onReceivePropsHandler}
+          />
+        ) : (
+          ""
+        )}
+
 
       </div>
-      {isRightsidePannel ? (
-        <RightsidePannel
-          componentData={
-            <ComponentRenderData
-              onReceivechildProps={onReceivePropsHandler}
-            />
-          }
-          componentLayout={pannelobj}
-          onReceiveProps={onReceivePropsHandler}
-        />
-      ) : (
-        ""
-      )}
-      
 
-    </div>
-  
     </>
   );
 }
 const ComponentRenderData = (props) => {
-   
-  
+
+
   return (
     <>
       <img src="/assests/useraddicon.svg" alt="" />
-     <h4 className='useraddicontxt'>The word ‘lorem’ for example, isn’t a real Latin word,</h4>
-     <Input placeholder="Name" style={{height:"50px"}}/> 
-     <Input placeholder="DOB" style={{height:"50px", marginTop:"30px"}}/> 
-     <Input placeholder="Mobile No" style={{height:"50px", marginTop:"30px"}}/> 
-     <Input placeholder="Joining Date" style={{height:"50px", marginTop:"30px"}}/> 
-     <Input placeholder="Job Title" style={{height:"50px", marginTop:"30px"}}/> 
-     <Input placeholder="Job Type" style={{height:"50px", marginTop:"30px"}}/> 
-     <Input placeholder="Employee ID" style={{height:"50px", marginTop:"30px"}}/> 
-
-
-
-
-
- 
-
+      <h4 className='useraddicontxt'>The word ‘lorem’ for example, isn’t a real Latin word,</h4>
+      <Input placeholder="Name" style={{ height: "50px" }} />
+      <Input placeholder="DOB" style={{ height: "50px", marginTop: "30px" }} />
+      <Input placeholder="Mobile No" style={{ height: "50px", marginTop: "30px" }} />
+      <Input placeholder="Joining Date" style={{ height: "50px", marginTop: "30px" }} />
+      <Input placeholder="Job Title" style={{ height: "50px", marginTop: "30px" }} />
+      <Input placeholder="Job Type" style={{ height: "50px", marginTop: "30px" }} />
+      <Input placeholder="Employee ID" style={{ height: "50px", marginTop: "30px" }} />
       <Button type="" className="savebtn2" >Save </Button>
-    
-    
     </>
   );
 };

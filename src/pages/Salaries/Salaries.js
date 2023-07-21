@@ -38,7 +38,6 @@ const CustomermanagementView = () => {
       </div>
       <div
         className="addbuss"
-        style={{ display: "flex", height: "34px", gap: "10px" }}
         onClick={() => setIsRightsidePannel(true)}
       >
         <IoAddCircle className="addicon" />
