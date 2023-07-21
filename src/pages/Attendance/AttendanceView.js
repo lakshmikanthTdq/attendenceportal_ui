@@ -94,7 +94,9 @@ function AttendanceView() {
       <div className="attendancetabs">
         <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
       </div>
-      
+      <div className="tablecard">
+        
+      </div>
     </>
   );
 }

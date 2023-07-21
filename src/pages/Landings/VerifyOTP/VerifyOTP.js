@@ -27,7 +27,7 @@ function VerifyOTP() {
                 renderInput={(props) => <input {...props} />}
               />
             </div>
-            <div className="resendotpsec"> <p>didn’t receive? </p> <a href=""> Resend otp</a> </div>
+            <div className="resendotpsec"> <p>didn’t receive? </p> &nbsp;&nbsp; <a href=""> Resend otp</a> </div>
             
             <Button type="" className="otpsubmitbtn" onClick={() => {navigate("/forgotpassword")}}>Submit</Button>
             </section>
