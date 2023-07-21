@@ -204,27 +204,16 @@ function LandingPage() {
           </div>
           <p>Salaries</p>
         </div>
+        {/* /////////// temporary use onlyy//////// */}
+        <div>
+       <p onClick={() => {navigate('/layout/viewcustomer/view')}}>viewcustomer</p> 
+      </div>
+      {/* //////////////////////////////////////////////// */}
+
       </div>
 
-      {/* <div className="card">
-    <img src="/assests/customer-managementicon.png" alt="customer-management"   />
-    </div>
-
-    <div className="card">
-    <img src="/assests/employeesicon.png" alt="employees"   />
-    </div>
-
-    <div className="card">
-    <img src="/assests/attendanceicon.png" alt="attendance"   />
-    </div>
-
-    <div className="card">
-    <img src="/assests/reportsicon.png" alt="reports"   />
-    </div>
-
-    <div className="card">
-    <img src="/assests/salariesicon.png" alt="salaries"   />
-    </div> */}
+    
+     
       <div className="arrow">
         <img src="/assests/peoplearrowicon.png" alt="arrowicon" />
       </div>

@@ -15,8 +15,8 @@ const PageNotFound = ({error, resetErrorBoundary}) => {
         <Button type="primary"
           className="saveerror"
           onClick={() => {
-            // navigate('/layout/landing');
-            window.location.reload();
+            navigate('/layout/landing');
+            // window.location.reload();
           }}
         >Home</Button>
       </div>

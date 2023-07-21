@@ -19,7 +19,6 @@ const RightsidePannel = (props) => {
           <div className='headertext'>
             <p className={componentLayout.pageName === "vendorportal" ? "heading1" : ""}>{componentLayout.title}</p>
             <IoMdClose className='closeicon' onClick={() => props.onReceiveProps(false, "close")}  />
-            <img src="/assests/img/close.svg" alt=""/>
           </div>
 
           <div className="contentSection">

@@ -1,4 +1,4 @@
-const salariescolumns = [
+ export const salariescolumns = [
     {
         title: 'Name',
         dataIndex: 'name',
@@ -90,7 +90,7 @@ const salariescolumns = [
 ];
 
 
-const salariesData = [
+export const salariesData = [
     {
         key: '1',
         name: 'Chandu',

@@ -10,7 +10,7 @@ import AttendanceView from './pages/Attendance/AttendanceView';
 import Reports from './pages/Reports/Reports';
 import Salaries from './pages/Salaries/Salaries';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
-
+import ViewCustomer from './pages/ViewCustromer/ViewCustomer';
 import './App.css';
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         <Route path="attendance/view" element={<AttendanceView />} />
         <Route path="reports/view" element={<Reports />} />
         <Route path="salaries/view" element={<Salaries />} />
+        <Route path="viewcustomer/view" element={<ViewCustomer />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />   
     </Routes>

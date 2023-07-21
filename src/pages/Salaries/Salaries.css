@@ -16,9 +16,9 @@
   height: 60px;
   font-size: 20px;
 }
-.salariessidepannel {
+/* .salariessidepannel {
   margin-bottom: 35px;
-}
+} */
 
 .datepicker:hover {
   border: 1px solid #1a2b6d;
@@ -38,31 +38,17 @@
   font-size: 17px;
   font-weight: 600;
 }
-.finalisepayrollbtn {
-  height: 45px;
-  border: 2px solid #1a2b6d;
-  color: #1a2b6d;
-  text-align: left;
-  font: "Nunito";
-  letter-spacing: 0px;
-  font-size: 17px;
-  font-weight: 600;
-}
-.finalisepayrollbtn:hover {
+
+.seesummarybtn:hover {
   color: #ffffff !important;
   background-color: #1a2b6d;
-
   font: "Nunito";
   letter-spacing: 0px;
   font-size: 17px;
   font-weight: 600;
 }
 
-/* /////////// need to discuss /////////////////// */
-:where(.css-dev-only-do-not-override-1m62vyb).ant-btn-default:not(
-    :disabled
-  ):not(.ant-btn-disabled):hover {
+.seesummarybtn:hover {
   color: #1a2b6d;
   border-color: #1a2b6d;
 }
-/* //////////////////////////// */

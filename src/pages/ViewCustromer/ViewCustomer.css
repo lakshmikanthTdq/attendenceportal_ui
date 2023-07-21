@@ -1,0 +1,38 @@
+.yellowcircle{
+    width: 54px;
+height: 54px;
+
+  background: #EBB142 0% 0% no-repeat padding-box;
+opacity: 1;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.customers p {
+    text-align: left;
+    font: normal normal 600 22px/30px "Nunito";
+    letter-spacing: 0px;
+    color: #1A2B6D;
+    opacity: 1;
+    margin-top: 13px;
+    cursor: pointer;
+  }
+
+  .customers {
+    margin-left: 60px;
+    margin-top: 20px;
+    display: inline-flex;
+    gap: 70px;
+
+  }
+  .customerdetails{
+    text-align: left;
+font-family: "Poppins";
+letter-spacing: 0px;
+color: #3B4046;
+opacity: 1;
+font-weight: 500;
+margin-left: 60px;
+margin-top: 40px;
+font-size: 18px;
+  }

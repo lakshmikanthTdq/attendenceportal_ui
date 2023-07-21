@@ -5,6 +5,18 @@
 .useraddicontxt{
     margin-top: 40px;
 }
+.addbussiness{
+    display: inline-flex;
+    height: 34px;
+    gap: 10px;
+    justify-content: end;
+    margin-left: 1675px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+.addbusinesstext{
+    margin-top: 7px;
+}
 .savebtn{
     margin-top: 190px;
     width:350px;
