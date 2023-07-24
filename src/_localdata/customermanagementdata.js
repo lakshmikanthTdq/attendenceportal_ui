@@ -5,7 +5,7 @@ export const customerManagementcolumns = [
         key: 'name',
         width: '',
         isEdit: true,
-        nagigate: "/layout/employees/view",
+        nagigate: "/layout/viewcustomer/view",
     },
     {
         title: 'Contact person',

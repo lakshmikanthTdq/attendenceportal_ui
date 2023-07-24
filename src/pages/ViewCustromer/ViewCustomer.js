@@ -1,4 +1,4 @@
-import React ,{ useState} from "react";
+import React ,{ useState,useEffect} from "react";
 import { GoPersonFill } from "react-icons/go";
 import { Tabs } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -155,9 +155,6 @@ const ViewCustomer = () => {
   
 };
 const ComponentRenderData = (props) => {
-  const navigate = useNavigate();
-
-
   return (
     <>
       {/* <img src="/assests/useraddicon.svg" alt="" /> */}
@@ -229,7 +226,7 @@ const ComponentRenderData = (props) => {
         <Input placeholder="URL" style={{ height: "50px", marginTop: "40px", width: 250 }} />
 
       </ Space>
-      <Button type="" className="savebtn" onClick={() => {navigate('/viewcustomer/view')}} >Save  </Button>
+      <Button type="" className="savebtn"   >Save  </Button>
 
 
     </>

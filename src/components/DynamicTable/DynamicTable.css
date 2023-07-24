@@ -168,7 +168,7 @@
 
 .ant-table-cell p {
     color: #1a2b6d;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
     cursor: pointer;
@@ -177,4 +177,14 @@
 .ant-table-cell p small {
     display: block;
     color: #898989;
+}
+
+td.ant-table-cell {
+    font-size: 20px;
+    text-align: left;
+    font-family:  "Nunito";
+    letter-spacing: 0px;
+    color: #3B4046;
+    font-weight: 500;
+    opacity: 1;
 }

@@ -100,12 +100,12 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
         <div className="custom-input-fields">
           <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
         </div>
-        <div>
+        {/* <div>
           <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
-        </div>
-        <div className="custom-input-fields">
+        </div> */}
+        {/* <div className="custom-input-fields">
           <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
-        </div>
+        </div> */}
         <div className="custom-input-fields">
           <Select
             defaultValue={"All"}

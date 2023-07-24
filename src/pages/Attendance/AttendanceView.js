@@ -101,7 +101,7 @@ function AttendanceView() {
     },
     {
       key: "2",
-      label: `weekly`,
+      label: `Weekly`,
       children: (
         <>
           <div className="dailydata">

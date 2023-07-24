@@ -204,10 +204,7 @@ function LandingPage() {
           </div>
           <p>Salaries</p>
         </div>
-        {/* /////////// temporary use onlyy//////// */}
-        <div>
-       <p onClick={() => {navigate('/layout/viewcustomer/view')}}>viewcustomer</p> 
-      </div>
+       
       </div>
 
     
