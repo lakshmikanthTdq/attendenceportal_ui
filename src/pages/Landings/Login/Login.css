@@ -7,7 +7,7 @@
     vertical-align: center;
     position: relative;
     justify-items: center;
-
+    overflow: hidden;
 }
 
 .loginbackground div:first-child{
@@ -33,7 +33,7 @@
 }
 
 section.fieldssection {
-    margin-top: 26%;
+    margin-top: 5%;
 }
 section.fieldssection h2{
     margin:20px 0 40px 0;
@@ -69,6 +69,14 @@ section.rememberforgotsec a{
     color: #fff;
     height: 60px;
     font-size: 20px;
+}
+.threecircles{
+    position: absolute;
+    height: 460px;
+    width: 513px;
+   margin-top: 622px;
+   margin-left: -83px;
+   
 }
 
 /* ///////////////////////////////////////////////////////////////////////////// */

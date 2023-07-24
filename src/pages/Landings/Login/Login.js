@@ -20,9 +20,12 @@ function Login() {
       <div className="loginbackground">
         <div>
           <h1>Welcome !</h1>
+          
         </div>
+        <img className="threecircles" src="/assests/threecircleslogin.svg"></img>
         <div>
           <section className="fieldssection">
+            <img src="/assests/tdq.png"></img> <br></br>
             <img src="/assests/loginusericon.svg"></img>
             <h2>Log In</h2>
             <form>

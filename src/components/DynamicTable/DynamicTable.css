@@ -49,3 +49,45 @@
 .ant-tooltip-open .ant-table-column-sorter.ant-table-column-sorter-full{
     color: #fff!important;
 }
+
+
+.deletemodalcss .ant-modal-content{
+    width: 395px;
+    height: 200px;
+    padding: 0px;
+}
+.deletemodalcss .ant-modal-close{
+    display: none;
+}
+.deletemodalcss .ant-modal-footer{
+    margin-top: 50px;
+    justify-content: space-around;
+    display: flex;
+}
+.deletemodalcss .ant-modal-header{
+    background-color: #1A2B6D;
+    height: 49px;
+    
+}
+.deletemodalcss .ant-modal-title{
+    color: #fff;
+    font: normal normal bold 19px/25px Nunito;
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+}
+.deletemodalcss .ant-modal-body{
+    padding:10px 40px 0px 40px;
+    color: #000000;
+    font-size: 18px;
+}
+.deletemodalcss button:last-child {
+    color: red !important;
+    border: 1px solid red;
+    border-radius: 0.25rem;
+  }
+  .deletemodalcss button:last-child:hover{
+    color: rgb(255, 255, 255) !important;
+    background: red;
+    border: 1px solid red !important;
+  }

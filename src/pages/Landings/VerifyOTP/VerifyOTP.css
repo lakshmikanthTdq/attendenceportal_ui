@@ -8,7 +8,7 @@
     vertical-align: center;
     position: relative;
     justify-items: center;
-
+    overflow: hidden;
 }
 
 .verifyotpbackground div:first-child{
@@ -47,7 +47,10 @@
 }
 
 .otpfield section{
-    margin-top: 150px;
+    margin-top: -155px;
+}
+.otpfield section h5{
+    margin-top: 100px;
 }
 
 .otpboxes{
@@ -76,4 +79,12 @@
     color: #fff;
     height: 60px;
     font-size: 20px;
+}
+
+.threecircles{
+    position: absolute;
+    height: 460px;
+    width: 513px;
+   margin-top: 622px;
+   margin-left: -83px;
 }
