@@ -36,3 +36,45 @@ margin-left: 60px;
 margin-top: 40px;
 font-size: 18px;
   }
+
+  .customercard{
+    width: 304px;
+height: 154px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 6px #00000029;
+border-radius: 5px;
+opacity: 1;
+text-align: center;
+  }
+  .customercard p {
+    margin: 35px auto 0;
+    width: 74px;
+height: 30px;
+/* UI Properties */
+text-align: left;
+font: normal normal bold 22px/30px "Nunito";
+letter-spacing: 0px;
+color: #1A2B6D;
+opacity: 1;
+  }
+  .customercard span {
+    width: 61px;
+height: 70px;
+/* UI Properties */
+text-align: left;
+font: normal normal 800 51px/70px "Nunito";
+letter-spacing: 0px;
+color: #1A2B6D;
+opacity: 1;
+  }
+  .customerdetails {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .viewcustomercards{
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }

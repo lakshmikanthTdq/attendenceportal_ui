@@ -52,7 +52,7 @@ const ViewCustomer = () => {
       key: "1",
       label: `Customer`,
       children: (
-        <>
+         <>
           <div className="customers">
             <Space size="small">
               <span className="yellowcircle"></span>
@@ -62,16 +62,30 @@ const ViewCustomer = () => {
               
               <RiEditBoxFill style={{ color: "#959595", fontSize: "25px" }} />
               <p>Edit</p> 
-
             </Space>
+
           </div>
 
+
           <div className="customerdetails">
+            <div>
             <p>Contact person details :</p>
             <p>Registered address :</p>
             <p>Website :</p>
+            </div>
+            <div className="viewcustomercards">
+            <div className="customercard">
+            <p>Outlets</p>
+            <span>43</span>
+            </div>
+            <div className="customercard">
+            <p>Users</p>
+            <span>62</span>
+            </div>
+           </div>
           </div>
-        </>
+          </>
+        
       ),
     },
     {

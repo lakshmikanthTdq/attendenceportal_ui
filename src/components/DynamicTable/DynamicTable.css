@@ -135,3 +135,20 @@
     width: 100%;
     object-fit: cover;
 }
+
+.editicon,.dolloricon,.deleteicon{
+    width: 24px;
+    height: 24px;
+    color: #1A2B6D!important;
+    cursor: pointer;
+    }
+    
+    .dolloricon :hover{
+        color: #3B4046 ;
+    }
+    .editicon :hover{
+        color: #3B4046 ;
+    }
+    .deleteicon :hover{
+        color: #D41317;
+    }

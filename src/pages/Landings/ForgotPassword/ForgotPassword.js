@@ -9,7 +9,6 @@ function ForgotPassword() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const navigate = useNavigate();
 
-
   return (
       <div className="loginbackground">
         <div>
@@ -43,7 +42,8 @@ function ForgotPassword() {
             </form>
           </section>
            
-            <Button type="" className="logbtn" onClick={() => {navigate("/layout/landing")}}>Submit</Button>
+            <Button type="" className="logbtn" onClick={() => {navigate("/"); window.location.reload()}}>Submit</Button>
+             
         </div>
       </div>
   );

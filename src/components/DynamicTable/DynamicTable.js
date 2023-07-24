@@ -37,17 +37,17 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
   if (actionIndex !== -1) {
     columns[actionIndex]["render"] = (_, obj) => (
       <Space className="tableActionIcons">
-        <Tooltip placement="top" title="Edit">
-          <MdEditSquare onClick={() => events.onTableHandler("edit", obj)} />
+        <Tooltip placement="top" title="Edit" >
+          <MdEditSquare onClick={() => events.onTableHandler("edit", obj)} className="editicon" />
         </Tooltip>
         <Tooltip placement="top" title="Delete">
-          <MdDelete onClick={showModal}
+          <MdDelete onClick={showModal} className="deleteicon"
           // {() => events.onTableHandler("delete", obj)} 
           />
         </Tooltip>
         <span className={config.isAdvance === true ? "" : "d-none"}>
           <Tooltip placement="top" title="Advance">
-            <BiSolidDollarCircle onClick={() => events.onTableHandler("advance", obj)} />
+            <BiSolidDollarCircle onClick={() => events.onTableHandler("advance", obj)} className="dolloricon" />
           </Tooltip>
         </span>
       </Space>
