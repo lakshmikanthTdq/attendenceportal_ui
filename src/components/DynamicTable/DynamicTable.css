@@ -6,9 +6,9 @@
     box-shadow: 0px 3px 6px #00000029;
 }
 
-.ant-table-thead th{
-    background-color: #1A2B6D!important;
-    color: #fff!important;
+.ant-table-thead th {
+    background-color: #1A2B6D !important;
+    color: #fff !important;
 }
 
 .ant-table-thead th:first-child:after {
@@ -33,12 +33,12 @@
     z-index: 0;
 }
 
-.ant-table-thead th:before{
-    background-color: #ffffff56!important;
+.ant-table-thead th:before {
+    background-color: #ffffff56 !important;
 }
 
-.ant-table-tbody td{
-    border-bottom: 1px solid #e2e2e2!important;
+.ant-table-tbody td {
+    border-bottom: 1px solid #e2e2e2 !important;
 }
 
 .ant-table-column-sorter.ant-table-column-sorter-full {
@@ -46,53 +46,60 @@
 }
 
 .ant-table-column-sorter.ant-table-column-sorter-full:hover,
-.ant-tooltip-open .ant-table-column-sorter.ant-table-column-sorter-full{
-    color: #fff!important;
+.ant-tooltip-open .ant-table-column-sorter.ant-table-column-sorter-full {
+    color: #fff !important;
 }
 
 
-.deletemodalcss .ant-modal-content{
+.deletemodalcss .ant-modal-content {
     width: 395px;
     height: 200px;
     padding: 0px;
 }
-.deletemodalcss .ant-modal-close{
+
+.deletemodalcss .ant-modal-close {
     display: none;
 }
-.deletemodalcss .ant-modal-footer{
+
+.deletemodalcss .ant-modal-footer {
     margin-top: 50px;
     justify-content: space-around;
     display: flex;
 }
-.deletemodalcss .ant-modal-header{
+
+.deletemodalcss .ant-modal-header {
     background-color: #1A2B6D;
     height: 49px;
-    
+
 }
-.deletemodalcss .ant-modal-title{
+
+.deletemodalcss .ant-modal-title {
     color: #fff;
     font: normal normal bold 19px/25px Nunito;
     display: flex;
     justify-content: center;
     padding-top: 11px;
 }
-.deletemodalcss .ant-modal-body{
-    padding:10px 40px 0px 40px;
+
+.deletemodalcss .ant-modal-body {
+    padding: 10px 40px 0px 40px;
     color: #000000;
     font-size: 18px;
 }
+
 .deletemodalcss button:last-child {
     color: red !important;
     border: 1px solid red;
     border-radius: 0.25rem;
-  }
-  .deletemodalcss button:last-child:hover{
+}
+
+.deletemodalcss button:last-child:hover {
     color: rgb(255, 255, 255) !important;
     background: red;
     border: 1px solid red !important;
-  }
+}
 
-.custom-input-fields .ant-input{
+.custom-input-fields .ant-input {
     border-radius: 21px 0 0 21px;
     height: 36px;
     background: #F6F6F6;
@@ -103,22 +110,23 @@
 .custom-input-fields .ant-select-selector {
     border-radius: 21px;
     height: 36px;
-    padding-left: 20px!important;
-    border: none!important;
-    background: #F6F6F6!important;
+    padding-left: 20px !important;
+    border: none !important;
+    background: #F6F6F6 !important;
     box-shadow: 1px 1px 4px #cdcdcd;
 }
 
 .custom-input-fields button {
-    height: 36px!important;
+    height: 36px !important;
     border-left: none;
-    border-radius: 0 21px 21px 0!important;
+    border-radius: 0 21px 21px 0 !important;
     background: #F6F6F6;
     box-shadow: 1px 1px 4px #cdcdcd;
 }
 
-.custom-input-fields .ant-input, .custom-input-fields button{
-    border:none!important;
+.custom-input-fields .ant-input,
+.custom-input-fields button {
+    border: none !important;
 }
 
 .trUserIcon {
@@ -129,6 +137,7 @@
     margin-right: 10px;
     border: 3px solid #fff;
     box-shadow: 0px 0px 0px 1.5px #1a2b6d;
+    background: #1a2b6d;
 }
 
 .trUserIcon img {
@@ -136,19 +145,36 @@
     object-fit: cover;
 }
 
-.editicon,.dolloricon,.deleteicon{
+.editicon,
+.dolloricon,
+.deleteicon {
     width: 24px;
     height: 24px;
-    color: #1A2B6D!important;
+    color: #1A2B6D !important;
     cursor: pointer;
-    }
-    
-    .dolloricon :hover{
-        color: #3B4046 ;
-    }
-    .editicon :hover{
-        color: #3B4046 ;
-    }
-    .deleteicon :hover{
-        color: #D41317;
-    }
+}
+
+.dolloricon:hover {
+    color: #3B4046;
+}
+
+.editicon:hover path {
+    color: #3B4046;
+}
+
+.deleteicon:hover {
+    color: #D41317;
+}
+
+.ant-table-cell p {
+    color: #1a2b6d;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+}
+
+.ant-table-cell p small {
+    display: block;
+    color: #898989;
+}

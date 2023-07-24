@@ -4,18 +4,19 @@ import './DynamicTable.css'
 import { Space, Tooltip, Modal, Button } from 'antd';
 import { MdEditSquare, MdDelete } from "react-icons/md";
 import { BiSolidDollarCircle } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 export function DynamicTable({ config, columns, data, filterby, events }) {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const navigate = useNavigate();
 
   let pagingConfig = {}
   if (config.isPagination) {
     pagingConfig = {
-      defaultPageSize: 8,
+      defaultPageSize: 5,
       showSizeChanger: config.isPaging,
-      pageSizeOptions: ['8', '15', '20', '30']
+      pageSizeOptions: ['5', '10', '15', '20', '30']
     }
   } else {
     pagingConfig = false;
@@ -33,6 +34,12 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
     console.log(e);
   }
 
+  const onNavigateHandler = (e, obj) => {
+    if(obj.isEdit){
+      navigate(obj.nagigate);
+    }
+  }
+
   let actionIndex = columns.findIndex(x => x.dataIndex === "action");
   if (actionIndex !== -1) {
     columns[actionIndex]["render"] = (_, obj) => (
@@ -42,7 +49,6 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
         </Tooltip>
         <Tooltip placement="top" title="Delete">
           <MdDelete onClick={showModal} className="deleteicon"
-          // {() => events.onTableHandler("delete", obj)} 
           />
         </Tooltip>
         <span className={config.isAdvance === true ? "" : "d-none"}>
@@ -59,9 +65,12 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
       columns[userIndex]["render"] = (_, obj) => (
         <Space>
           <div className="trUserIcon">
+            {obj.nameImg !== "" ? 
             <img src={`/assests/${obj.nameImg}`} alt={obj.name} />
+            : ''
+          }
           </div>
-          <p>{obj.name}<small>{obj.nameOutlet}</small></p>
+          <p onClick={(e) => {onNavigateHandler(e, columns[userIndex])}}>{obj.name}<small>{obj.nameOutlet}</small></p>
         </Space>
       )
   }

@@ -4,8 +4,8 @@ export const customerManagementcolumns = [
         dataIndex: 'name',
         key: 'name',
         width: '',
-        isEdit: false,
-        nagigate: "",
+        isEdit: true,
+        nagigate: "/layout/employees/view",
     },
     {
         title: 'Contact person',
@@ -65,7 +65,7 @@ export const customerManagementData = [
     {
       "key": 2,
       "name": "Chandu_2",
-      "nameImg": "user_icon.png",
+      "nameImg": "",
       "nameOutlet": "Outlet 02",
       "contactperson": "Rahul",
       "contactphone": 984125875,
