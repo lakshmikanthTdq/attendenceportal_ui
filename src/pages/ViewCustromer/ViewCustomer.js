@@ -69,9 +69,9 @@ const ViewCustomer = () => {
 
           <div className="customerdetails">
             <div>
-            <p>Contact person details :</p>
-            <p>Registered address :</p>
-            <p>Website :</p>
+            <p>Contact person details   :</p>
+            <p>Registered address     :</p>
+            <p>Website      :</p>
             </div>
             <div className="viewcustomercards">
             <div className="customercard">

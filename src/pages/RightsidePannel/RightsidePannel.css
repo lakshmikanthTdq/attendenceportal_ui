@@ -32,9 +32,8 @@
 .closeicon {
     cursor: pointer !important;
     color: red !important;
-    font-size: 64px!important;
-    margin-top: 12px;
-    margin-left: 380px;
+    font-size: 38px!important;
+    margin: 24px;
 }
 .headertext p {
     color: #ffffff;

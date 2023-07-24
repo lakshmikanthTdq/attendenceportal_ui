@@ -84,7 +84,8 @@ function Header() {
         >
           <a onClick={(e) => e.preventDefault()}>
             <Space>
-              <IoPersonCircle style={{ color: "#FFFFFF", fontSize: "30px" }} />
+              <IoPersonCircle style={{ color: "#FFFFFF", fontSize: "30px" }}  />
+              
             </Space>
           </a>
         </Dropdown>
