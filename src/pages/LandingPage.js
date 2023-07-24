@@ -208,13 +208,12 @@ function LandingPage() {
         <div>
        <p onClick={() => {navigate('/layout/viewcustomer/view')}}>viewcustomer</p> 
       </div>
-      {/* //////////////////////////////////////////////// */}
-
       </div>
 
     
      
       <div className="arrow">
+        <div></div>
         <img src="/assests/peoplearrowicon.png" alt="arrowicon" />
       </div>
     </div>
