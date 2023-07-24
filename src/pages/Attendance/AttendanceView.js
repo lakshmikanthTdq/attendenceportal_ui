@@ -1,12 +1,15 @@
-import React from "react";
 import "./attendance.css";
-import { Space } from "antd";
+import React ,{ useState} from "react";
 import { GoPersonFill } from "react-icons/go";
 import { Tabs } from "antd";
 import { DatePicker } from "antd";
+import { useNavigate } from "react-router-dom";
+
 import dayjs from "dayjs";
+import { Input,Button,Space,Select } from 'antd';
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { DynamicTable } from "../../components/DynamicTable/DynamicTable";
+import RightsidePannel from '../RightsidePannel/RightsidePannel';
 import { attendenceDailycolumns, attendenceDailyData } from '../../_localdata/attendencedata';
 dayjs.extend(customParseFormat);
 
@@ -32,6 +35,8 @@ function AttendanceView() {
   const onChangeTableHandler = (type, object) => {
     if (type === "edit") {
       console.log("edit", object);
+      setIsRightsidePannel(true);
+
     }
     else if (type === "delete") {
       console.log("delete", object)
@@ -48,6 +53,15 @@ function AttendanceView() {
 
   const onFilterHandler = (type) => {
 
+  }
+  const navigate = useNavigate();
+  const [isRightsidePannel, setIsRightsidePannel] = useState(false);
+  const onReceivePropsHandler = (pannel, load) => {
+    if (load === "getFetch") {
+      setIsRightsidePannel(pannel);
+    } else if (load === "close") {
+      setIsRightsidePannel(pannel);
+    }
   }
 
   const eventhandlers = {
@@ -158,13 +172,75 @@ function AttendanceView() {
           <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
         </div>
 
+        {isRightsidePannel ? (
+        <RightsidePannel
+          componentData={
+            <ComponentRenderData
+              onReceivechildProps={onReceivePropsHandler}
+            />
+          }
+          componentLayout={pannelobj}
+          onReceiveProps={onReceivePropsHandler}
+        />
+      ) : (
+        ""
+      )}
+
       </div>
     </>
   );
 }
+const ComponentRenderData = (props) => {
+
+
+  return (
+    <>
+     
+    <div className="salarieseditbox">
+      <div>
+        <p className="salariesedittext1">
+          Chandu
+        </p>
+        <p className="salariesedittext2">
+          Outlet 03
+        </p>
+        </div>
+        <div>
+        <p className="salariesedittext3">
+          Part-Time
+        </p>
+       
+      </div>
+      
+
+    </div>
+    <div className="atendancefeildsedit">
+    < Space size="large" >
+        <Input placeholder="Start Time" style={{ height: "50px", marginTop: "40px", width: 250 }} />
+        <Input placeholder="End Time" style={{ height: "50px", marginTop: "40px", width: 250 }} />
+
+
+      </ Space>
+    < Space size="large" >
+
+      <Input placeholder="Total Hours" style={{ height: "50px", marginTop: "40px", width: 250,marginRight:"270px" }} />
+      </ Space>
+      </div>
+      <Button type="" className="savebtn5" >Save </Button>
+
+
+    </>
+  );
+};
+
 
 export default AttendanceView;
 
+const pannelobj = {
+  title: "Employee Details ",
+  description: "",
+  // bgImage: "/assests/img/AddDocumentsIcon.svg",
+};
 export const config = {
   isCheckbox: false,
   isSorting: true,

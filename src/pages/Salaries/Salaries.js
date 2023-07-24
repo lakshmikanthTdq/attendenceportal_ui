@@ -24,7 +24,7 @@ const CustomermanagementView = () => {
   const onChangeTableHandler = (type, object) => {
     if(type === "edit"){
       console.log("edit", object);
-      setIsRightsidePannel(true);
+      // setIsRightsidePannel(true);
     }
     else if(type === "delete"){
       console.log("delete", object)
