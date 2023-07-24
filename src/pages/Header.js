@@ -3,7 +3,7 @@ import { BiSolidBell } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import { IoPersonCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import { Avatar, Dropdown, Badge, Space } from "antd";
+import { Avatar, Dropdown, Badge, Space, Select } from "antd";
 
 function Header() {
   const navigate = useNavigate();
@@ -21,6 +21,34 @@ function Header() {
       ),
     },
   ];
+
+  const selectList= [
+    {
+      value: 'Customer Management',
+      label: 'Customer Management',
+    },
+    {
+      value: 'Employees',
+      label: 'Employees',
+    },
+    {
+      value: 'Attendance',
+      label: 'Attendance',
+    },
+    {
+      value: 'Reports',
+      label: 'Reports',
+    },
+    {
+      value: 'Salaries',
+      label: 'Salaries',
+    },
+  ];
+
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+
   return (
     <div className="header">
       <div className="tdqlogobackground">
@@ -33,6 +61,16 @@ function Header() {
           }}
         />
       </div>
+      
+    <Select className="headerselectcomp"
+      defaultValue=""
+      style={{
+        width: 220,marginRight: "-1250px"
+      }}
+      onChange={handleChange}
+      options={selectList}
+    />
+
       <Space size="large">
         <Badge count={5}>
           
