@@ -53,8 +53,8 @@ export const customerManagementcolumns = [
 export const customerManagementData = [
     {
       "key": 1,
-      "name": "Chandu_1",
-      "nameImg": "",
+      "name": "Chandu_13",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 01",
       "contactperson": "Bhanu",
       "contactphone": 987654321,
@@ -65,7 +65,7 @@ export const customerManagementData = [
     {
       "key": 2,
       "name": "Chandu_2",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 02",
       "contactperson": "Rahul",
       "contactphone": 984125875,
@@ -76,7 +76,7 @@ export const customerManagementData = [
     {
       "key": 3,
       "name": "Chandu_3",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 03",
       "contactperson": "Rahul",
       "contactphone": 798465123,
@@ -87,7 +87,7 @@ export const customerManagementData = [
     {
       "key": 4,
       "name": "Chandu_4",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 04",
       "contactperson": "Rahul",
       "contactphone": 984125875,
@@ -98,7 +98,7 @@ export const customerManagementData = [
     {
       "key": 5,
       "name": "Chandu_5",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 05",
       "contactperson": "Bhanu",
       "contactphone": 234987451,
@@ -109,7 +109,7 @@ export const customerManagementData = [
     {
       "key": 6,
       "name": "Chandu_6",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 06",
       "contactperson": "Tulasi",
       "contactphone": 234987451,
@@ -120,7 +120,7 @@ export const customerManagementData = [
     {
       "key": 7,
       "name": "Chandu_7",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 07",
       "contactperson": "Tulasi",
       "contactphone": 984125875,
@@ -131,7 +131,7 @@ export const customerManagementData = [
     {
       "key": 8,
       "name": "Chandu_8",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 08",
       "contactperson": "Rahul",
       "contactphone": 987654321,
@@ -142,7 +142,7 @@ export const customerManagementData = [
     {
       "key": 9,
       "name": "Chandu_9",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 09",
       "contactperson": "Rahul",
       "contactphone": 798465123,
@@ -153,7 +153,7 @@ export const customerManagementData = [
     {
       "key": 10,
       "name": "Chandu_10",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 010",
       "contactperson": "Surya",
       "contactphone": 987654321,
@@ -164,7 +164,7 @@ export const customerManagementData = [
     {
       "key": 11,
       "name": "Chandu_11",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 011",
       "contactperson": "Bhanu",
       "contactphone": 987654321,
@@ -175,7 +175,7 @@ export const customerManagementData = [
     {
       "key": 12,
       "name": "Chandu_12",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 012",
       "contactperson": "Tulasi",
       "contactphone": 984125875,
@@ -186,7 +186,7 @@ export const customerManagementData = [
     {
       "key": 13,
       "name": "Chandu_13",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 013",
       "contactperson": "Tulasi",
       "contactphone": 234987451,
@@ -197,7 +197,7 @@ export const customerManagementData = [
     {
       "key": 14,
       "name": "Chandu_14",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 014",
       "contactperson": "Tulasi",
       "contactphone": 984125875,
@@ -208,7 +208,7 @@ export const customerManagementData = [
     {
       "key": 15,
       "name": "Chandu_15",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 015",
       "contactperson": "Rahul",
       "contactphone": 984125875,
@@ -219,7 +219,7 @@ export const customerManagementData = [
     {
       "key": 16,
       "name": "Chandu_16",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 016",
       "contactperson": "Tulasi",
       "contactphone": 234987451,
@@ -230,7 +230,7 @@ export const customerManagementData = [
     {
       "key": 17,
       "name": "Chandu_17",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 017",
       "contactperson": "Surya",
       "contactphone": 984125875,
@@ -241,7 +241,7 @@ export const customerManagementData = [
     {
       "key": 18,
       "name": "Chandu_18",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 018",
       "contactperson": "Rahul",
       "contactphone": 987654321,
@@ -252,7 +252,7 @@ export const customerManagementData = [
     {
       "key": 19,
       "name": "Chandu_19",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 019",
       "contactperson": "Kalyan",
       "contactphone": 234987451,
@@ -263,7 +263,7 @@ export const customerManagementData = [
     {
       "key": 20,
       "name": "Chandu_20",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 020",
       "contactperson": "Tulasi",
       "contactphone": 987654321,
@@ -274,7 +274,7 @@ export const customerManagementData = [
     {
       "key": 21,
       "name": "Chandu_21",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 021",
       "contactperson": "Rahul",
       "contactphone": 987654321,
@@ -285,7 +285,7 @@ export const customerManagementData = [
     {
       "key": 22,
       "name": "Chandu_22",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 022",
       "contactperson": "Tulasi",
       "contactphone": 987654321,
@@ -296,7 +296,7 @@ export const customerManagementData = [
     {
       "key": 23,
       "name": "Chandu_23",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 023",
       "contactperson": "Tulasi",
       "contactphone": 234987451,
@@ -307,7 +307,7 @@ export const customerManagementData = [
     {
       "key": 24,
       "name": "Chandu_24",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 024",
       "contactperson": "Rahul",
       "contactphone": 798465123,
@@ -318,7 +318,7 @@ export const customerManagementData = [
     {
       "key": 25,
       "name": "Chandu_25",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 025",
       "contactperson": "Bhanu",
       "contactphone": 984125875,
@@ -329,7 +329,7 @@ export const customerManagementData = [
     {
       "key": 26,
       "name": "Chandu_26",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 026",
       "contactperson": "Tulasi",
       "contactphone": 798465123,
@@ -340,7 +340,7 @@ export const customerManagementData = [
     {
       "key": 27,
       "name": "Chandu_27",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 027",
       "contactperson": "Surya",
       "contactphone": 984125875,
@@ -351,7 +351,7 @@ export const customerManagementData = [
     {
       "key": 28,
       "name": "Chandu_28",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 028",
       "contactperson": "Bhanu",
       "contactphone": 987654321,
@@ -362,7 +362,7 @@ export const customerManagementData = [
     {
       "key": 29,
       "name": "Chandu_29",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 029",
       "contactperson": "Surya",
       "contactphone": 234987451,
@@ -373,7 +373,7 @@ export const customerManagementData = [
     {
       "key": 30,
       "name": "Chandu_30",
-      "nameImg": "",
+      "nameImg": "user_icon.png",
       "nameOutlet": "Outlet 030",
       "contactperson": "Subbu",
       "contactphone": 984125875,
