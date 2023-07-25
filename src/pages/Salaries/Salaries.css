@@ -52,3 +52,9 @@
   color: #1a2b6d;
   border-color: #1a2b6d;
 }
+.seesummarytxt1 input.ant-input,.seesummarytxt1 input.ant-input:focus {
+
+  border: none!important;
+  box-shadow: none!important;
+  font: normal normal medium 22px/27px Nunito !important;
+}
