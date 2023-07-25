@@ -17,8 +17,8 @@ function ForgotPassword() {
         <img className="threecircles" src="/assests/threecircleslogin.svg"></img>
         <div>
           <section className="fieldssection">
-          <img src="/assests/tdq.png"></img> <br></br>
-            <img src="/assests/loginusericon.svg"></img>
+          <img src="/assests/tdq.png" alt="tdqlogo"></img> <br></br>
+            <img src="/assests/loginusericon.svg" alt="user"></img>
             <h2>Forgot Password</h2>
             <form>
             <Input.Password prefix={<BiSolidLock fontSize={"24px"}/>}

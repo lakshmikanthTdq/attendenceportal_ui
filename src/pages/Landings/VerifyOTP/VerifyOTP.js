@@ -17,7 +17,7 @@ function VerifyOTP() {
         <img className="threecircles" src="/assests/threecircleslogin.svg"></img>
           <div className="otpfield">
            <section >
-           <img src="/assests/tdq.png"></img> <br></br>
+           <img src="/assests/tdq.png" alt="tdqlogo"></img> <br></br>
             <h5>verification code sent to</h5> <h4>techdoquest@gmail.com</h4>
             <div className="otpboxes"> 
               <OtpInput 
