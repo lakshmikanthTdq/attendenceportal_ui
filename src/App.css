@@ -123,3 +123,8 @@
 .tablecard .ant-tabs-nav{
     margin-top: -51px!important;
 }
+
+.widgets p{
+    font-size: 22px ;
+    font-weight: 500;
+}

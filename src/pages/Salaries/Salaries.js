@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { IoAddCircle } from "react-icons/io5";
 import { GoPersonFill } from "react-icons/go";
-import { Button } from "antd";
-import { Input } from "antd";
-import {  Space } from "antd";
+import { Button, Input, Space } from "antd";
 import { useNavigate } from "react-router-dom";
 import "./Salaries.css";
 import RightsidePannel from "../RightsidePannel/RightsidePannel";
 import { DynamicTable } from '../../components/DynamicTable/DynamicTable';
-import {salariescolumns,salariesData} from '../../_localdata/salariesdata'
+import {salariescolumns,salariesData,summaryData} from '../../_localdata/salariesdata'
 const CustomermanagementView = () => {
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const [HandlerType, setHandlerType] = useState("entry");
@@ -176,63 +174,18 @@ const ComponentRenderData = (props) => {
   } else if (props.handler === "summary") {
     return (
       <>
-      <div className="seesummarytxt1">
-        <Space size="large">
-          <Input
-            placeholder="Total Salary                              :"
-            style={{ height: "50px", marginTop: "40px", width: 250, }}
-          />
-          
-          <Input
-            placeholder=""
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-        </Space>
-        
-        <Space size="large">
-          <Input
-            placeholder="Total OT                                   :"
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-          
-          <Input
-            placeholder=""
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-        </Space>
-        <Space size="large">
-          <Input
-            placeholder="Total Advance                          :"
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-          
-          <Input
-            placeholder=""
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-        </Space>
-        <Space size="large">
-          <Input
-            placeholder="Total Deduction                       :"
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-          
-          <Input
-            placeholder=""
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-        </Space>
-        <Space size="large">
-          <Input
-            placeholder="Total Pay                                  :"
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-          
-          <Input
-            placeholder=""
-            style={{ height: "50px", marginTop: "40px", width: 250 }}
-          />
-        </Space>
+      <div >
+        <table className="seesummarytxt1">
+        {summaryData.map((elem)=>{
+          return (
+            <tr>
+              <th>{elem.displayName}</th>
+              <td>:</td>
+              <td>{elem.value}</td>
+            </tr>
+          )})
+      }
+      </table>
         </div>
 
       </>
