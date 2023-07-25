@@ -10,13 +10,13 @@
     overflow: hidden;
 }
 
-.loginbackground div:first-child{
+.loginbackground aside:first-child{
     width: 50%;
     align-self: center;
     text-align: center;
 }
 
-.loginbackground div:last-child{
+.loginbackground aside:last-child{
     width: 50%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: inset 0px 3px 6px #00000029;
@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.loginbackground div:first-child h1{
+.loginbackground aside:first-child h1{
     color: #fff;
     font: normal normal 800 72px/98px Nunito;
 }
@@ -45,18 +45,14 @@ section.fieldssection form{
 section.fieldssection form input{
     height: 50px;
 }
-section.rememberforgotsec{
+.rememberforgotsec{
     margin-top: 25px;
-    margin-left: 25%;
     display: flex;
-    width: 70%;
-    gap: 30%;
-    align-items: center;
-    justify-content: left;
-   
+    justify-content: space-between;
 }
-section.rememberforgotsec a{
+.rememberforgotsec a{
     color: #9E9E9E;
+    margin-top: 5px;
 }
 
 .logbtn{
@@ -82,73 +78,77 @@ section.rememberforgotsec a{
 /* ///////////////////////////////////////////////////////////////////////////// */
 
 @media screen and (max-width: 992px) and (min-width:768px){
-    .loginbackground div:last-child{
+    .loginbackground aside:last-child{
         border-radius: 0px 0px ;
         width: 70%;
     }
-    section.rememberforgotsec{
+    .rememberforgotsec{
         flex-direction: column;
         margin-left: 0%;
         gap: 10px;
     }
-    section.fieldssection form{
+    .fieldssection form{
         width: 70%;
     }
     .logbtn{
         width:320px;
     }
-    .loginbackground div:first-child h1{
+    .loginbackground aside:first-child h1{
         color: #fff;
         font: normal normal 800 42px/78px Nunito;
     }
 }
 @media screen and (max-width: 768px) and (min-width:576px){
-    .loginbackground div:last-child{
+    .loginbackground aside:last-child{
         border-radius: 0px 0px ;
         width: 70%;
     }
-    section.rememberforgotsec{
+    .rememberforgotsec{
         flex-direction: column;
         margin-left: 0%;
         gap: 10px;
     }
-    section.fieldssection form{
+    .fieldssection form{
         width: 70%;
     }
     .logbtn{
         width:320px;
     }
-    .loginbackground div:first-child h1{
+    .loginbackground aside:first-child h1{
         color: #fff;
         font: normal normal 800 42px/78px Nunito;
     }
 }
 @media screen and (max-width:576px){
-    .loginbackground div:last-child{
+    .loginbackground aside:last-child{
         border-radius: 0px 0px ;
         width: 100% !important;
     }
-    section.rememberforgotsec{
+    .rememberforgotsec{
         flex-direction: column;
         margin-left: 0%;
         gap: 10px;
     }
-    section.fieldssection form{
+    .fieldssection form{
         width: 70%;
     }
     .logbtn{
         width:320px;
     }
-    .loginbackground div:first-child h1 {
+    .loginbackground aside:first-child h1 {
         display: none;
     }
-    .loginbackground div:first-child {
+    .loginbackground aside:first-child {
         display: none;
     }
-    section.fieldssection form input{
+    .fieldssection form input{
         height: 28px;
     }
-    section.rememberforgotsec a{
+    .rememberforgotsec a{
         display: none;
     }
+}
+
+.ant-form-item-explain-error {
+    text-align: left;
 }
