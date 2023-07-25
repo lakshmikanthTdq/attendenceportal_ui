@@ -14,6 +14,8 @@ import {employeecolumns,employeeData} from '../../_localdata/employeedata'
 function EmployeesView() {
 
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
+  const [HandlerType, setHandlerType] = useState("entry");
+
   const navigate = useNavigate();
 
   const onReceivePropsHandler = (pannel, load) => {
@@ -35,6 +37,7 @@ function EmployeesView() {
     else if(type === "advance"){
       console.log("advance", object)
       setIsRightsidePannel(true);
+      setHandlerType(true)
     }
   }
   const onChangeSearchHandler = (keyword) => {
@@ -61,7 +64,7 @@ function EmployeesView() {
       </div>
       <div>
         <div className='addbussiness'
-          onClick={() => setIsRightsidePannel(true)}
+         onClick={() => { setIsRightsidePannel(true); setHandlerType("entry") }}
         >
           <IoAddCircle className='addicon'/>
           <h4 className="addbusinesstext">Add Employee</h4>
@@ -76,9 +79,7 @@ function EmployeesView() {
         {isRightsidePannel ? (
           <RightsidePannel
             componentData={
-              <ComponentRenderData
-                onReceivechildProps={onReceivePropsHandler}
-              />
+              <ComponentRenderData handler={HandlerType} onReceivechildProps={onReceivePropsHandler} />
             }
             componentLayout={pannelobj}
             onReceiveProps={onReceivePropsHandler}
@@ -94,6 +95,8 @@ function EmployeesView() {
   );
 }
 const ComponentRenderData = (props) => {
+  
+  if (props.handler === "entry") {
 
 
   return (
@@ -125,6 +128,40 @@ const ComponentRenderData = (props) => {
       <Button type="" className="savebtn2" >Save </Button>
     </>
   );
+} else if (props.handler === "summary") {
+  return (
+    <>
+       <div className="salarieseditbox">
+      <div>
+      <div className="trUserIcon1">
+           
+            <img src={`/assests/user_icon.png`} alt="userprofileicon" />
+           
+          </div>
+          <div className="attendaceedittxt">
+
+        <p className="salariesedittext1">
+          Chandu
+        </p>
+        <p className="salariesedittext2">
+          Outlet 03
+        </p>
+        </div>
+        </div>
+
+        <div>
+        <p className="salariesedittext3">
+          Part-Time
+        </p>
+       
+      </div>
+      
+
+    </div>
+
+    </>
+  )
+}
 };
 
 

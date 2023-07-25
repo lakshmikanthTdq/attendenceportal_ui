@@ -198,6 +198,13 @@ const ComponentRenderData = (props) => {
      
     <div className="salarieseditbox">
       <div>
+      <div className="trUserIcon1">
+           
+            <img src={`/assests/user_icon.png`} alt="userprofileicon" />
+           
+          </div>
+          <div className="attendaceedittxt">
+
         <p className="salariesedittext1">
           Chandu
         </p>
@@ -205,6 +212,8 @@ const ComponentRenderData = (props) => {
           Outlet 03
         </p>
         </div>
+        </div>
+
         <div>
         <p className="salariesedittext3">
           Part-Time

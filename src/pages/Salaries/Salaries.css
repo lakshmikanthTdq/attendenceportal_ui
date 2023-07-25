@@ -52,3 +52,16 @@
   color: #1a2b6d;
   border-color: #1a2b6d;
 }
+
+table.seesummarytxt1 {
+  margin-top: 100px;
+  row-gap: 80px;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  color: #1a2b6d;
+}
+table.seesummarytxt1 th{
+  width: 250px;
+  text-align: left;
+}
