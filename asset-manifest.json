@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/techdoquest/tdq-attendanceportal-frontend/static/css/main.a7b9604b.css",
-    "main.js": "/techdoquest/tdq-attendanceportal-frontend/static/js/main.c52eb808.js",
-    "static/js/787.074279c2.chunk.js": "/techdoquest/tdq-attendanceportal-frontend/static/js/787.074279c2.chunk.js",
-    "index.html": "/techdoquest/tdq-attendanceportal-frontend/index.html",
-    "static/media/corners.svg": "/techdoquest/tdq-attendanceportal-frontend/static/media/corners.600a0490da95bff0d5b7.svg",
-    "main.a7b9604b.css.map": "/techdoquest/tdq-attendanceportal-frontend/static/css/main.a7b9604b.css.map",
-    "main.c52eb808.js.map": "/techdoquest/tdq-attendanceportal-frontend/static/js/main.c52eb808.js.map",
-    "787.074279c2.chunk.js.map": "/techdoquest/tdq-attendanceportal-frontend/static/js/787.074279c2.chunk.js.map"
+    "main.css": "/techdoquest/attendanceportal/static/css/main.dc909aa3.css",
+    "main.js": "/techdoquest/attendanceportal/static/js/main.efad7a61.js",
+    "static/js/787.074279c2.chunk.js": "/techdoquest/attendanceportal/static/js/787.074279c2.chunk.js",
+    "index.html": "/techdoquest/attendanceportal/index.html",
+    "static/media/corners.svg": "/techdoquest/attendanceportal/static/media/corners.600a0490da95bff0d5b7.svg",
+    "main.dc909aa3.css.map": "/techdoquest/attendanceportal/static/css/main.dc909aa3.css.map",
+    "main.efad7a61.js.map": "/techdoquest/attendanceportal/static/js/main.efad7a61.js.map",
+    "787.074279c2.chunk.js.map": "/techdoquest/attendanceportal/static/js/787.074279c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7b9604b.css",
-    "static/js/main.c52eb808.js"
+    "static/css/main.dc909aa3.css",
+    "static/js/main.efad7a61.js"
   ]
 }
