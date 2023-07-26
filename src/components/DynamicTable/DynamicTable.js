@@ -11,6 +11,10 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
+  const actoionOrder = [
+    config.isActionleft === false ? 1 : 3, 2, config.isActionleft === false ? 3 : 1
+  ]
+
   let pagingConfig = {}
   if (config.isPagination) {
     pagingConfig = {
@@ -97,16 +101,13 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
   return (
     <div className="px-5 mt-4">
       <div className="d-flex justify-content-between mb-4">
-        <div className="custom-input-fields">
-          <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
-        </div>
-        {/* <div>
-          <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
-        </div> */}
-        {/* <div className="custom-input-fields">
-          <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
-        </div> */}
-        <div className="custom-input-fields">
+        <div style={{order : actoionOrder[0]}}></div>
+        { config.isSearchbox && 
+          <div style={{order : actoionOrder[1]}} className="custom-input-fields">
+            <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
+          </div> }
+          <div style={{order : actoionOrder[2]}} className="custom-input-fields">
+        { config.isAction && 
           <Select
             defaultValue={"All"}
             style={{ width: 350 }}
@@ -118,7 +119,9 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
               { value: 'disabled', label: 'Disabled', disabled: true },
             ]}
           />
+        }
         </div>
+        
       </div>
 
       <div className="tableWrapper">

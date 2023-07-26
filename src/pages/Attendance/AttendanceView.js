@@ -32,9 +32,16 @@ const onChange = (key) => {
 
 function AttendanceView() {
 
+  // variable declarations 
+  const [isRightsidePannel, setIsRightsidePannel] = useState(false);
+  const [pannelTitle, setPannelTitle] = useState("Add Business");
+  const [actionBtn, setActionBtn] = useState("Save");
+
   const onChangeTableHandler = (type, object) => {
     if (type === "edit") {
       console.log("edit", object);
+     setPannelTitle("Employee Details")
+      setActionBtn("Update")
       setIsRightsidePannel(true);
 
     }
@@ -55,7 +62,6 @@ function AttendanceView() {
 
   }
   const navigate = useNavigate();
-  const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const onReceivePropsHandler = (pannel, load) => {
     if (load === "getFetch") {
       setIsRightsidePannel(pannel);
@@ -176,12 +182,13 @@ function AttendanceView() {
         <RightsidePannel
           componentData={
             <ComponentRenderData
-              onReceivechildProps={onReceivePropsHandler}
-            />
-          }
-          componentLayout={pannelobj}
-          onReceiveProps={onReceivePropsHandler}
-        />
+            onReceivechildProps={onReceivePropsHandler}
+            actionbtn={actionBtn}
+          />
+        }
+        componentLayout={pannelTitle}
+        onReceiveProps={onReceivePropsHandler}
+      />
       ) : (
         ""
       )}
@@ -235,7 +242,7 @@ const ComponentRenderData = (props) => {
       <Input placeholder="Total Hours" style={{ height: "50px", marginTop: "40px", width: 250,marginRight:"270px" }} />
       </ Space>
       </div>
-      <Button type="" className="savebtn5" >Save </Button>
+      <Button type="" className="savebtn5" onClick={() => props.onReceivechildProps(false, "close")} >Save </Button>
 
 
     </>

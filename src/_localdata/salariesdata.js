@@ -1,4 +1,4 @@
- export const salariescolumns = [
+export const salariescolumns = [
     {
         title: 'Name',
         dataIndex: 'name',
@@ -96,15 +96,15 @@ export const salariesData = [
         "name": 'Chandu',
         "days": '10',
         "nameImg": "user_icon.png",
-        "noofot":'8',
-        "salary":'5200',
-        "ot":'12',
-        "advance":'1000',
-        "deduction":'1200',
-        "remaining":'1080',
-        "totalpay":'6000',
-        "payby":'Lorem',
-        "action":'',
+        "noofot": '8',
+        "salary": '5200',
+        "ot": '12',
+        "advance": '1000',
+        "deduction": '1200',
+        "remaining": '1080',
+        "totalpay": '6000',
+        "payby": 'Lorem',
+        "action": '',
 
     },
     {
@@ -112,14 +112,22 @@ export const salariesData = [
         "name": 'Chandu',
         "days": '10',
         "nameImg": "user_icon.png",
-        "noofot":'8',
-        "salary":'5200',
-        "ot":'12',
-        "advance":'1000',
-        "deduction":'1200',
-        "remaining":'1080',
-        "totalpay":'6000',
-        "payby":'Lorem',
-        "action":'',
+        "noofot": '8',
+        "salary": '5200',
+        "ot": '12',
+        "advance": '1000',
+        "deduction": '1200',
+        "remaining": '1080',
+        "totalpay": '6000',
+        "payby": 'Lorem',
+        "action": '',
     }
+];
+
+export const summaryData = [
+    { "displayName": "Total Salary", "value": "" },
+    { "displayName": "Total OT", "value": "" },
+    { "displayName": "Total Advance", "value": "" },
+    { "displayName": "Total Deduction", "value": "" },
+    { "displayName": "Total Pay", "value": "" },
 ];

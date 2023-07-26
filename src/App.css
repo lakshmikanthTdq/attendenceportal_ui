@@ -44,14 +44,23 @@
 
 .widgets {
     position: absolute;
-    top: 20%;
+    top: 13%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.widgets h2{
+    font-weight: 800;
+    color: #1A2B6D;
+    margin-bottom: 30px;
+}
+
+.widgets section{
     display: flex;
     gap: 80px;
 }
 
-.card {
+.widgets .card {
     width: 200px;
     height: 200px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -63,21 +72,21 @@
     text-align: center;
 }
 
-.card:hover {
+.widgets .card:hover {
     background-color: #1A2B6D;
 }
 
-.card img:hover {
+.widgets .card img:hover {
     background: #FFFFFF;
 }
 
-.card p {
+.widgets .card p {
     margin-top: 15px;
     margin-left: 10px;
     text-align: center !important;
 }
 
-.card:hover p {
+.widgets .card:hover p {
     color: #FFFFFF;
 }
 
@@ -122,4 +131,24 @@
 
 .tablecard .ant-tabs-nav{
     margin-top: -51px!important;
+}
+
+.addbussiness {
+    display: inline-flex;
+    height: 34px;
+    gap: 10px;
+    justify-content: end;
+    margin-left: 1675px;
+    margin-top: 0px;
+    cursor: pointer;
+    position: absolute;
+    /* margin-top: 26px; */
+}
+/* .addbusinesstext{
+    margin-top: 3px;
+} */
+
+.widgets p{
+    font-size: 22px ;
+    font-weight: 500;
 }

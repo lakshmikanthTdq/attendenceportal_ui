@@ -168,15 +168,15 @@ th.ant-table-cell {
 }
 
 .dolloricon:hover {
-    color: #3B4046;
+    color: #3B4046 !important;
 }
 
 .editicon:hover path {
-    color: #3B4046;
+    color: #3B4046 !important;
 }
 
 .deleteicon:hover {
-    color: #D41317;
+    color: #D41317 !important;
 }
 
 .ant-table-cell p {

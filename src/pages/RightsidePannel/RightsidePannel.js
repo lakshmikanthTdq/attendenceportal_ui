@@ -17,12 +17,11 @@ const RightsidePannel = (props) => {
       <section className="sidebarBg">
         <div className='sidebar'>
           <div className='headertext'>
-            <p className={componentLayout.pageName === "vendorportal" ? "heading1" : ""}>{componentLayout.title}</p>
+            <p className={componentLayout.pageName === "vendorportal" ? "heading1" : ""}>{componentLayout}</p>
             <IoMdClose className='closeicon' onClick={() => props.onReceiveProps(false, "close")}  />
           </div>
 
           <div className="contentSection">
-            {componentLayout.description.length > 0 && <h6>{componentLayout.description}</h6>}
             <article>
               {props.componentData}
             </article>
