@@ -33,8 +33,8 @@ function Reports() {
               <h6>+3Hrs Longer</h6>
               <p>vs last month</p>
             </div>
-            <h2>320.00</h2>
-            <p>Total working hours</p>
+            <h2>56.00</h2>
+            <p>Total Regular hours</p>
           </Card>
           <Card>
             <div className="d-flex justify-content-between mb-4">
@@ -42,8 +42,8 @@ function Reports() {
               <h6>+3Hrs Longer</h6>
               <p>vs last month</p>
             </div>
-            <h2>320.00</h2>
-            <p>Total working hours</p>
+            <h2>80.32</h2>
+            <p>Total Overtime hours</p>
           </Card>
           <Card>
             <div className="d-flex justify-content-between mb-4">
@@ -51,8 +51,8 @@ function Reports() {
               <h6>+3Hrs Longer</h6>
               <p>vs last month</p>
             </div>
-            <h2>320.00</h2>
-            <p>Total working hours</p>
+            <h2>80.32</h2>
+            <p>Total pay</p>
           </Card>
           <Card>
             <div className="d-flex justify-content-between mb-4">
@@ -60,8 +60,8 @@ function Reports() {
               <h6>+3Hrs Longer</h6>
               <p>vs last month</p>
             </div>
-            <h2>320.00</h2>
-            <p>Total working hours</p>
+            <h2>80.32</h2>
+            <p>Overtime pay</p>
           </Card>
           <Card>
             <div className="d-flex justify-content-between mb-4">
@@ -69,8 +69,8 @@ function Reports() {
               <h6>+3Hrs Longer</h6>
               <p>vs last month</p>
             </div>
-            <h2>320.00</h2>
-            <p>Total working hours</p>
+            <h2>80.32</h2>
+            <p>Total Advance Outstanding</p>
           </Card>
         </Space>
       </div>
@@ -167,7 +167,7 @@ const TotalSalary = (props) => {
 const TotalOvertime = (props) => {
   
   const config = {
-    percent: 0.25,
+    percent: 0.56,
     outline: {
       border: 4,
       distance: 8,
