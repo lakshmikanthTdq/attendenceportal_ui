@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { GoPersonFill } from "react-icons/go";
+import { FaClock } from "react-icons/fa";
 import { Space, Card } from 'antd';
 import { Area, Column } from '@ant-design/plots';
 import './report.css'
@@ -80,21 +81,57 @@ function Reports() {
       <div className="container-fluid px-5" id="report">
         <Space size={4} wrap style={{ width: "100%" }}>
           <Card>
+            <div className="d-flex justify-content-between mb-4">
+              <FaClock style={{ fontSize: 30 }} />
+              <h6>+3Hrs Longer</h6>
+              <p>vs last month</p>
+            </div>
+            <h2>320.00</h2>
             <p>Total working hours</p>
           </Card>
           <Card>
+            <div className="d-flex justify-content-between mb-4">
+              <FaClock style={{ fontSize: 30 }} />
+              <h6>+3Hrs Longer</h6>
+              <p>vs last month</p>
+            </div>
+            <h2>320.00</h2>
             <p>Total working hours</p>
           </Card>
           <Card>
+            <div className="d-flex justify-content-between mb-4">
+              <FaClock style={{ fontSize: 30 }} />
+              <h6>+3Hrs Longer</h6>
+              <p>vs last month</p>
+            </div>
+            <h2>320.00</h2>
             <p>Total working hours</p>
           </Card>
           <Card>
+            <div className="d-flex justify-content-between mb-4">
+              <FaClock style={{ fontSize: 30 }} />
+              <h6>+3Hrs Longer</h6>
+              <p>vs last month</p>
+            </div>
+            <h2>320.00</h2>
             <p>Total working hours</p>
           </Card>
           <Card>
+            <div className="d-flex justify-content-between mb-4">
+              <FaClock style={{ fontSize: 30 }} />
+              <h6>+3Hrs Longer</h6>
+              <p>vs last month</p>
+            </div>
+            <h2>320.00</h2>
             <p>Total working hours</p>
           </Card>
           <Card>
+            <div className="d-flex justify-content-between mb-4">
+              <FaClock style={{ fontSize: 30 }} />
+              <h6>+3Hrs Longer</h6>
+              <p>vs last month</p>
+            </div>
+            <h2>320.00</h2>
             <p>Total working hours</p>
           </Card>
         </Space>
