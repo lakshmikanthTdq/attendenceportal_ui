@@ -70,7 +70,7 @@ export function CustomermanagementView() {
         </Space>
       </div>
 
-      <div className='addbussiness'
+      <div className='addbussiness' style={{marginTop: "26px"}}
         onClick={() => {
           setIsRightsidePannel(true);
           setPannelTitle("Add Business")
@@ -200,4 +200,5 @@ export const config = {
   isAction: false,
   isAddNew:true,
   isActionleft: false,
+  isTableAction: true
 }

@@ -9,7 +9,7 @@ import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import RightsidePannel from '../RightsidePannel/RightsidePannel'
 import { DynamicTable } from '../../components/DynamicTable/DynamicTable';
-import {employeecolumns,employeeData} from '../../_localdata/employeedata'
+import { employeecolumns, employeeData } from '../../_localdata/employeedata'
 
 function EmployeesView() {
 
@@ -28,17 +28,17 @@ function EmployeesView() {
     }
   }
   const onChangeTableHandler = (type, object) => {
-    if(type === "edit"){
+    if (type === "edit") {
       console.log("edit", object);
       setPannelTitle("Edit Employee")
       setIsRightsidePannel(true);
       setActionBtn("Update")
     }
-    else if(type === "delete"){
+    else if (type === "delete") {
       console.log("delete", object)
-      
+
     }
-    else if(type === "advance"){
+    else if (type === "advance") {
       console.log("advance", object)
       setIsRightsidePannel(true);
       setHandlerType("advance")
@@ -53,12 +53,12 @@ function EmployeesView() {
   const onFilterHandler = (type) => {
 
   }
-    // receive handlers object
-    const eventhandlers = {
-      onTableHandler: onChangeTableHandler,
-      onSearchHandler: onChangeSearchHandler,
-      onFilterHandler: onFilterHandler
-    }
+  // receive handlers object
+  const eventhandlers = {
+    onTableHandler: onChangeTableHandler,
+    onSearchHandler: onChangeSearchHandler,
+    onFilterHandler: onFilterHandler
+  }
 
   return (
     <>
@@ -76,30 +76,30 @@ function EmployeesView() {
           <h4 className="addbusinesstext">Add Employee</h4>
         </div> */}
         <div className='addbussiness'
-        onClick={() => {
-          setIsRightsidePannel(true);
-          setPannelTitle("Add Employee")
-          setActionBtn("Save")
-          setHandlerType("entry")
-        }}
-      >
-        <IoAddCircle className='addicon'/>
-        <h4 className="addbusinesstext">Add Employee</h4>
-      </div>
+          onClick={() => {
+            setIsRightsidePannel(true);
+            setPannelTitle("Add Employee")
+            setActionBtn("Save")
+            setHandlerType("entry")
+          }}
+        >
+          <IoAddCircle className='addicon' />
+          <h4 className="addbusinesstext">Add Employee</h4>
+        </div>
         <DynamicTable
-        config={config}
-        columns={employeecolumns}
-        data={employeeData}
-        filterby={"Search by Business Name"}
-        events={eventhandlers}
-      />
+          config={config}
+          columns={employeecolumns}
+          data={employeeData}
+          filterby={"Search by Business Name"}
+          events={eventhandlers}
+        />
         {isRightsidePannel ? (
           <RightsidePannel
             componentData={
               <ComponentRenderData
-              onReceivechildProps={onReceivePropsHandler}
-              actionbtn={actionBtn}
-              handler={HandlerType} />
+                onReceivechildProps={onReceivePropsHandler}
+                actionbtn={actionBtn}
+                handler={HandlerType} />
             }
             componentLayout={pannelTitle}
             onReceiveProps={onReceivePropsHandler}
@@ -115,8 +115,8 @@ function EmployeesView() {
   );
 }
 const ComponentRenderData = (props) => {
-  
-   if (props.handler === "entry") {
+
+  if (props.handler === "entry") {
 
   return (
     <>
@@ -144,37 +144,49 @@ const ComponentRenderData = (props) => {
       <Input placeholder="Job Title" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Job Type" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Employee ID" style={{ height: "50px", marginTop: "30px" }} />
-      <Button type="" className="employeesavebtn" onClick={() => props.onReceivechildProps(false, "close")}>{props.actionbtn} </Button>
+      <Button type="" className="savebtn2" onClick={() => props.onReceivechildProps(false, "close")}>{props.actionbtn} </Button>
     </>
   );
   } else if (props.handler === "advance") {
-  return (
-    <>
-       <div className="salarieseditbox">
-      <div>
-      <div className="trUserIcon1">
-           
-            <img src={`/assests/user_icon.png`} alt="userprofileicon" />
-           
+    return (
+      <>
+        <div className="salarieseditbox">
+          <div>
+            <div className="trUserIcon1">
+
+              <img src={`/assests/user_icon.png`} alt="userprofileicon" />
+
+            </div>
+            <div className="attendaceedittxt">
+
+              <p className="salariesedittext1">
+                Chandu
+              </p>
+              <p className="salariesedittext2">
+                Outlet 03
+              </p>
+            </div>
           </div>
-          <div className="attendaceedittxt">
 
-        <p className="salariesedittext1">
-          Chandu
-        </p>
-        <p className="salariesedittext2">
-          Outlet 03
-        </p>
-        </div>
+          <div>
+            <p className="salariesedittext3">
+              Part-Time
+            </p>
+
+          </div>
+
+
         </div>
 
-        <div>
-        <p className="salariesedittext3">
-          Part-Time
+        <p className='totaloutstandingtxt'>
+          Total Outstanding
         </p>
-       
-      </div>
-      
+        <div className='advancetxt'>
+          <p className='advanceno'>200000</p>
+        </div>
+        <Button type="" className="savebtn5" >Add Advance</Button>
+        <Input placeholder="Add New Advance" style={{ height: "50px", marginTop: "30px" }} />
+        <Input placeholder="Date" style={{ height: "50px", marginTop: "30px" }} />
 
     </div>
    
@@ -198,11 +210,15 @@ const ComponentRenderData = (props) => {
 
 export default EmployeesView;
 
-
 export const config = {
   isCheckbox: false,
   isSorting: true,
   isPagination: true,
-  isPaging:true,
+  isPaging: true,
   isAdvance: true,
+  isSearchbox: true,
+  isAction: true,
+  isAddNew: true,
+  isActionleft: true,
+  isTableAction: true
 }

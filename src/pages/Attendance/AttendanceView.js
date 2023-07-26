@@ -10,7 +10,7 @@ import { Input,Button,Space,Select } from 'antd';
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { DynamicTable } from "../../components/DynamicTable/DynamicTable";
 import RightsidePannel from '../RightsidePannel/RightsidePannel';
-import { attendenceDailycolumns, attendenceDailyData } from '../../_localdata/attendencedata';
+import { attendenceDailycolumns, attendenceDailyData, weeklyMonthlycolumns, weeklyMonthlyData } from '../../_localdata/attendencedata';
 dayjs.extend(customParseFormat);
 
 const { RangePicker } = DatePicker;
@@ -126,8 +126,8 @@ function AttendanceView() {
           </div>
           <DynamicTable
             config={config}
-            columns={attendenceDailycolumns}
-            data={attendenceDailyData}
+            columns={weeklyMonthlycolumns}
+            data={weeklyMonthlyData}
             filterby={"Search by Business Name"}
             events={eventhandlers}
           />
@@ -155,8 +155,8 @@ function AttendanceView() {
           </div>
           <DynamicTable
             config={config}
-            columns={attendenceDailycolumns}
-            data={attendenceDailyData}
+            columns={weeklyMonthlycolumns}
+            data={weeklyMonthlyData}
             filterby={"Search by Business Name"}
             events={eventhandlers}
           />
@@ -257,10 +257,16 @@ const pannelobj = {
   description: "",
   // bgImage: "/assests/img/AddDocumentsIcon.svg",
 };
+
 export const config = {
   isCheckbox: false,
   isSorting: true,
   isPagination: true,
   isPaging: true,
   isAdvance: false,
-}
+  isSearchbox: true,
+  isAction: true,
+  isAddNew: false,
+  isActionleft: false,
+  isTableAction: true
+};
