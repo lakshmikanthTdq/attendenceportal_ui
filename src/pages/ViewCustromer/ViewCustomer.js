@@ -272,6 +272,7 @@ export const Outletconfig = {
   isAction: false,
   isAddNew: true,
   isActionleft: false,
+  isTableAction: true
 }
 
 export const Userconfig = {
@@ -284,4 +285,5 @@ export const Userconfig = {
   isAction: false,
   isAddNew: true,
   isActionleft: false,
+  isTableAction: true
 }

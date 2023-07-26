@@ -14,8 +14,18 @@ const CustomermanagementView = () => {
   const [pannelTitle, setPannelTitle] = useState("Add Business");
   const [actionBtn, setActionBtn] = useState("Save");
   const navigate = useNavigate();
+  const [finalData,setFinalData] = useState(salariescolumns)
+  const [final, setFinal] = useState(false);
 
- 
+  useEffect(()=>{
+    if(final == true){
+      let actionindex = finalData.findIndex(x => x.key === "action");
+       finalData.splice(actionindex, 1);
+      console.log(finalData);
+      setFinalData(finalData);
+    }
+   },[final])
+
   const onReceivePropsHandler = (pannel, load) => {
     if (load === "getFetch") {
       setIsRightsidePannel(pannel);
@@ -68,7 +78,7 @@ const CustomermanagementView = () => {
           setActionBtn("Update") }} className="seesummarybtn" > See Summary</Button>
           {/* <Button  className="seesummarybtn" > See Summary</Button> */}
 
-          <Button className="seesummarybtn">Finalise Payroll</Button>
+          <Button className={final ? "Finalisebtngreen" : "seesummarybtn" } onClick={()=>{setFinal(true)}}>Finalise Payroll</Button>
         </Space>
       </div>
       <div className='addbussiness'
@@ -225,5 +235,10 @@ export const config = {
   isSorting: true,
   isPagination: true,
   isPaging: true,
-  isAdvance: false,
+  isAdvance: true,
+  isSearchbox: true,
+  isAction: true,
+  isAddNew: true,
+  isActionleft: true,
+  isTableAction: true
 }

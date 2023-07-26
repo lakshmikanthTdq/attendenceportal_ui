@@ -200,4 +200,5 @@ export const config = {
   isAction: false,
   isAddNew:true,
   isActionleft: false,
+  isTableAction: true
 }
