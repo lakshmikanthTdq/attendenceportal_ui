@@ -75,3 +75,19 @@ table.seesummarytxt1 td{
   width: 100px;
   text-align: center;
 }
+
+.editcontentcss .ant-input{
+  border: none !important;
+  box-shadow: none !important;
+}
+.editcontentcss label{
+  font-size: 22px !important;
+  color: #1a2b6d !important;
+}
+.editcontentcss .ant-form-item .ant-form-item-label{
+  text-align: left !important;
+}
+.editcontentcss label::after{
+  margin: 0px 8px 0px 85px !important;
+  /* text-align: right !important; */
+}

@@ -4,12 +4,10 @@ import { Tabs } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Input, Button, Space, Select } from 'antd';
 import RightsidePannel from '../RightsidePannel/RightsidePannel';
+import { IoAddCircle } from "react-icons/io5";
 
 import { DynamicTable } from "../../components/DynamicTable/DynamicTable";
-import {
-  attendenceDailycolumns,
-  attendenceDailyData,
-} from "../../_localdata/attendencedata";
+import { OutletsColumns, OutletsData, UserInfoColumns, UserInfoData } from "../../_localdata/customermanagementdata";
 import "./ViewCustomer.css";
 import { RiEditBoxFill } from "react-icons/ri";
 
@@ -34,7 +32,7 @@ const eventhandlers = {
   onFilterHandler: onFilterHandler,
 };
 const onChange = (key) => {
-  console.log(key);
+  console.log("key >>>>>>", key);
 };
 
 const ViewCustomer = () => {
@@ -76,7 +74,7 @@ const ViewCustomer = () => {
               <p>Registered address     :</p>
               <p>Website      :</p>
             </div>
-            
+
             <div className="viewcustomercards">
               <div className="customercard">
                 <p>Outlets</p>
@@ -97,10 +95,20 @@ const ViewCustomer = () => {
       label: `Outlets`,
       children: (
         <>
+          <div className='addbussiness'
+            onClick={() => {
+              setIsRightsidePannel(true);
+              setPannelTitle("Add Outlet")
+              setActionBtn("Save")
+            }}
+          >
+            <IoAddCircle className='addicon' />
+            <h4 className="addbusinesstext">Add Outlet</h4>
+          </div>
           <DynamicTable
-            config={config}
-            columns={attendenceDailycolumns}
-            data={attendenceDailyData}
+            config={Outletconfig}
+            columns={OutletsColumns}
+            data={OutletsData}
             filterby={"Search by Business Name"}
             events={eventhandlers}
           />
@@ -112,10 +120,20 @@ const ViewCustomer = () => {
       label: `User Info`,
       children: (
         <>
+        <div className='addbussiness'
+            onClick={() => {
+              setIsRightsidePannel(true);
+              setPannelTitle("Add User")
+              setActionBtn("Save")
+            }}
+          >
+            <IoAddCircle className='addicon' />
+            <h4 className="addbusinesstext">Add User</h4>
+          </div>
           <DynamicTable
-            config={config}
-            columns={attendenceDailycolumns}
-            data={attendenceDailyData}
+            config={Userconfig}
+            columns={UserInfoColumns}
+            data={UserInfoData}
             filterby={"Search by Business Name"}
             events={eventhandlers}
           />
@@ -244,10 +262,26 @@ const pannelobj = {
   title: "Edit Business ",
 };
 
-export const config = {
+export const Outletconfig = {
   isCheckbox: false,
   isSorting: true,
   isPagination: true,
   isPaging: true,
   isAdvance: false,
-};
+  isSearchbox: true,
+  isAction: false,
+  isAddNew: true,
+  isActionleft: false,
+}
+
+export const Userconfig = {
+  isCheckbox: false,
+  isSorting: true,
+  isPagination: true,
+  isPaging: true,
+  isAdvance: false,
+  isSearchbox: true,
+  isAction: false,
+  isAddNew: true,
+  isActionleft: false,
+}

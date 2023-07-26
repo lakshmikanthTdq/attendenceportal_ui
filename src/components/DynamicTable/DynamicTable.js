@@ -103,7 +103,9 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
   return (
     <div className="px-5 mt-4">
       <div className="d-flex justify-content-between mb-4">
-        <div style={{order : actoionOrder[0]}}></div>
+        { config.isAddNew && 
+          <div style={{order : actoionOrder[0]}}></div>
+        }
         { config.isSearchbox && 
           <div style={{order : actoionOrder[1]}} className="custom-input-fields">
             <Input.Search placeholder={filterby} onSearch={(e) => events.onSearchHandler(e)} style={{ width: 350 }} />
