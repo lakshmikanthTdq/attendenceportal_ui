@@ -10,6 +10,8 @@ import {salariescolumns,salariesData,summaryData} from '../../_localdata/salarie
 const CustomermanagementView = () => {
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const [HandlerType, setHandlerType] = useState("entry");
+  const [pannelTitle, setPannelTitle] = useState("Add Business");
+  const [actionBtn, setActionBtn] = useState("Save");
   const navigate = useNavigate();
 
  
@@ -23,7 +25,10 @@ const CustomermanagementView = () => {
   const onChangeTableHandler = (type, object) => {
     if (type === "edit") {
       console.log("edit", object);
-      // setIsRightsidePannel(true);
+      setIsRightsidePannel(true);
+      setPannelTitle("Edit Employee Pay")
+      setActionBtn("Update")
+
     }
     else if (type === "delete") {
       console.log("delete", object)
@@ -32,6 +37,7 @@ const CustomermanagementView = () => {
     else if (type === "advance") {
       console.log("advance", object)
       setIsRightsidePannel(true);
+      // setHandlerType("summary")
     }
   }
   const onChangeSearchHandler = (keyword) => {
@@ -55,15 +61,22 @@ const CustomermanagementView = () => {
           <p>SALARIES</p>
         </Space>
         <Space size="middle" className="salarybuttons">
-          <Button onClick={() => { setIsRightsidePannel(true); setHandlerType("summary") }} className="seesummarybtn" > See Summary</Button>
+          {/* <Button onClick={() => { setIsRightsidePannel(true); setHandlerType("summary"); setPannelTitle("Summary Report");
+      setActionBtn("Update") }} className="seesummarybtn" > See Summary</Button> */}
+          <Button  className="seesummarybtn" > See Summary</Button>
+
           <Button className="seesummarybtn">Finalise Payroll</Button>
         </Space>
       </div>
-      <div
-        className="addbussiness"
-        onClick={() => { setIsRightsidePannel(true); setHandlerType("entry") }}
+      <div className='addbussiness'
+        onClick={() => {
+          setIsRightsidePannel(true);
+          setPannelTitle("Add New Entry")
+          setActionBtn("Save")
+          // setHandlerType("entry")
+        }}
       >
-        <IoAddCircle className="addicon" />
+        <IoAddCircle className='addicon' />
         <h4 className="addbusinesstext">Add New Entry</h4>
       </div>
 
@@ -78,9 +91,12 @@ const CustomermanagementView = () => {
       {isRightsidePannel ? (
         <RightsidePannel
           componentData={
-            <ComponentRenderData handler={HandlerType} onReceivechildProps={onReceivePropsHandler} />
+            <ComponentRenderData
+              onReceivechildProps={onReceivePropsHandler}
+              actionbtn={actionBtn}
+            />
           }
-          componentLayout={pannelobj}
+          componentLayout={pannelTitle}
           onReceiveProps={onReceivePropsHandler}
         />
       ) : (
@@ -91,7 +107,7 @@ const CustomermanagementView = () => {
 };
 
 const ComponentRenderData = (props) => {
-  if (props.handler === "entry") {
+  // if (props.handler === "entry") {
     return (
       <>
 
@@ -166,40 +182,40 @@ const ComponentRenderData = (props) => {
           }}
         />
 
-        <Button type="" className="savebtn1">
-          Save{" "}
+        <Button type="" className="savebtn1" onClick={() => props.onReceivechildProps(false, "close")}>
+        {props.actionbtn}
         </Button>
       </>
     );
-  } else if (props.handler === "summary") {
-    return (
-      <>
-      <div >
-        <table className="seesummarytxt1">
-        {summaryData.map((elem)=>{
-          return (
-            <tr>
-              <th>{elem.displayName}</th>
-              <td>:</td>
-              <td>{elem.value}</td>
-            </tr>
-          )})
-      }
-      </table>
-        </div>
+  // } else if (props.handler === "summary") {
+  //   return (
+  //     <>
+  //     <div >
+  //       <table className="seesummarytxt1">
+  //       {summaryData.map((elem)=>{
+  //         return (
+  //           <tr>
+  //             <th>{elem.displayName}</th>
+  //             <td>:</td>
+  //             <td>{elem.value}</td>
+  //           </tr>
+  //         )})
+  //     }
+  //     </table>
+  //       </div>
 
-      </>
-    )
-  }
+  //     </>
+  //   )
+  // }
 };
 
 export default CustomermanagementView;
 
-const pannelobj = {
-  title: "Add New Entry ",
-  description: "",
-  // bgImage: "/assests/img/AddDocumentsIcon.svg",
-};
+// const pannelobj = {
+//   title: "Add New Entry ",
+//   description: "",
+//   // bgImage: "/assests/img/AddDocumentsIcon.svg",
+// };
 export const config = {
   isCheckbox: false,
   isSorting: true,

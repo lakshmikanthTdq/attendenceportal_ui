@@ -37,7 +37,7 @@ export function CustomermanagementView() {
     }
     else if (type === "advance") {
       console.log("advance", object)
-      setIsRightsidePannel(true);
+      // setIsRightsidePannel(true);
     }
   }
 
@@ -183,7 +183,7 @@ const ComponentRenderData = (props) => {
         <Input placeholder="Contact Person Details" style={{ height: "50px", marginTop: "40px", width: 250 }} />
 
       </ Space>
-      <Button type="" className="savebtn" >{props.actionbtn} </Button>
+      <Button type="" className="savebtn" onClick={() => props.onReceivechildProps(false, "close")} >{props.actionbtn} </Button>
     </>
   );
 };

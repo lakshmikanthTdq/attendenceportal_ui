@@ -14,6 +14,9 @@ import {employeecolumns,employeeData} from '../../_localdata/employeedata'
 function EmployeesView() {
 
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
+  const [pannelTitle, setPannelTitle] = useState("Add Employee");
+  const [actionBtn, setActionBtn] = useState("Save");
+
   const [HandlerType, setHandlerType] = useState("entry");
 
   const navigate = useNavigate();
@@ -28,7 +31,9 @@ function EmployeesView() {
   const onChangeTableHandler = (type, object) => {
     if(type === "edit"){
       console.log("edit", object);
+      setPannelTitle("Edit Employee")
       setIsRightsidePannel(true);
+      setActionBtn("Update")
     }
     else if(type === "delete"){
       console.log("delete", object)
@@ -36,8 +41,10 @@ function EmployeesView() {
     }
     else if(type === "advance"){
       console.log("advance", object)
-      setIsRightsidePannel(true);
-      setHandlerType(true)
+      // setIsRightsidePannel(true);
+      // setHandlerType("summary")
+      setPannelTitle("Advance Details")
+      setActionBtn("Save")
     }
   }
   const onChangeSearchHandler = (keyword) => {
@@ -63,12 +70,23 @@ function EmployeesView() {
         </Space>
       </div>
       <div>
-        <div className='addbussiness'
+        {/* <div className='addbussiness'
          onClick={() => { setIsRightsidePannel(true); setHandlerType("entry") }}
         >
           <IoAddCircle className='addicon'/>
           <h4 className="addbusinesstext">Add Employee</h4>
-        </div>
+        </div> */}
+        <div className='addbussiness'
+        onClick={() => {
+          setIsRightsidePannel(true);
+          setPannelTitle("Add Employee")
+          setActionBtn("Save")
+          // setHandlerType("entry")
+        }}
+      >
+        <IoAddCircle className='addicon'/>
+        <h4 className="addbusinesstext">Add Employee</h4>
+      </div>
         <DynamicTable
         config={config}
         columns={employeecolumns}
@@ -79,9 +97,11 @@ function EmployeesView() {
         {isRightsidePannel ? (
           <RightsidePannel
             componentData={
-              <ComponentRenderData handler={HandlerType} onReceivechildProps={onReceivePropsHandler} />
+              <ComponentRenderData
+              onReceivechildProps={onReceivePropsHandler}
+              actionbtn={actionBtn} />
             }
-            componentLayout={pannelobj}
+            componentLayout={pannelTitle}
             onReceiveProps={onReceivePropsHandler}
           />
         ) : (
@@ -96,7 +116,7 @@ function EmployeesView() {
 }
 const ComponentRenderData = (props) => {
   
-  if (props.handler === "entry") {
+  //  if (props.handler === "entry") {
 
 
   return (
@@ -125,53 +145,49 @@ const ComponentRenderData = (props) => {
       <Input placeholder="Job Title" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Job Type" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Employee ID" style={{ height: "50px", marginTop: "30px" }} />
-      <Button type="" className="savebtn2" >Save </Button>
+      <Button type="" className="savebtn2" onClick={() => props.onReceivechildProps(false, "close")}>{props.actionbtn} </Button>
     </>
   );
-} else if (props.handler === "summary") {
-  return (
-    <>
-       <div className="salarieseditbox">
-      <div>
-      <div className="trUserIcon1">
+  // } else if (props.handler === "summary") {
+  // return (
+  //   <>
+  //      <div className="salarieseditbox">
+  //     <div>
+  //     <div className="trUserIcon1">
            
-            <img src={`/assests/user_icon.png`} alt="userprofileicon" />
+  //           <img src={`/assests/user_icon.png`} alt="userprofileicon" />
            
-          </div>
-          <div className="attendaceedittxt">
+  //         </div>
+  //         <div className="attendaceedittxt">
 
-        <p className="salariesedittext1">
-          Chandu
-        </p>
-        <p className="salariesedittext2">
-          Outlet 03
-        </p>
-        </div>
-        </div>
+  //       <p className="salariesedittext1">
+  //         Chandu
+  //       </p>
+  //       <p className="salariesedittext2">
+  //         Outlet 03
+  //       </p>
+  //       </div>
+  //       </div>
 
-        <div>
-        <p className="salariesedittext3">
-          Part-Time
-        </p>
+  //       <div>
+  //       <p className="salariesedittext3">
+  //         Part-Time
+  //       </p>
        
-      </div>
+  //     </div>
       
 
-    </div>
+  //   </div>
 
-    </>
-  )
-}
+  //   </>
+  // )
+  // }
 };
 
 
 export default EmployeesView;
 
-const pannelobj = {
-  title: "Add Employee  ",
-  description: "",
-  // bgImage: "/assests/img/AddDocumentsIcon.svg",
-};
+
 export const config = {
   isCheckbox: false,
   isSorting: true,

@@ -142,11 +142,11 @@
     margin-top: 0px;
     cursor: pointer;
     position: absolute;
-    margin-top: 26px;
+    /* margin-top: 26px; */
 }
-.addbusinesstext{
+/* .addbusinesstext{
     margin-top: 3px;
-}
+} */
 
 .widgets p{
     font-size: 22px ;
