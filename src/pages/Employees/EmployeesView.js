@@ -16,7 +16,6 @@ function EmployeesView() {
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const [pannelTitle, setPannelTitle] = useState("Add Employee");
   const [actionBtn, setActionBtn] = useState("Save");
-
   const [HandlerType, setHandlerType] = useState("entry");
 
   const navigate = useNavigate();
@@ -42,9 +41,7 @@ function EmployeesView() {
     else if(type === "advance"){
       console.log("advance", object)
       setIsRightsidePannel(true);
-      setHandlerType("summary")
-      // setIsRightsidePannel(true);
-      // setHandlerType("summary")
+      setHandlerType("advance")
       setPannelTitle("Advance Details")
       setActionBtn("Save")
     }
@@ -83,7 +80,7 @@ function EmployeesView() {
           setIsRightsidePannel(true);
           setPannelTitle("Add Employee")
           setActionBtn("Save")
-          // setHandlerType("entry")
+          setHandlerType("entry")
         }}
       >
         <IoAddCircle className='addicon'/>
@@ -101,7 +98,8 @@ function EmployeesView() {
             componentData={
               <ComponentRenderData
               onReceivechildProps={onReceivePropsHandler}
-              actionbtn={actionBtn} />
+              actionbtn={actionBtn}
+              handler={HandlerType} />
             }
             componentLayout={pannelTitle}
             onReceiveProps={onReceivePropsHandler}
@@ -119,7 +117,6 @@ function EmployeesView() {
 const ComponentRenderData = (props) => {
   
    if (props.handler === "entry") {
-
 
   return (
     <>
@@ -150,7 +147,7 @@ const ComponentRenderData = (props) => {
       <Button type="" className="savebtn2" onClick={() => props.onReceivechildProps(false, "close")}>{props.actionbtn} </Button>
     </>
   );
-  } else if (props.handler === "summary") {
+  } else if (props.handler === "advance") {
   return (
     <>
        <div className="salarieseditbox">
