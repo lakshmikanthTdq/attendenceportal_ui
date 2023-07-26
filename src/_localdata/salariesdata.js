@@ -125,9 +125,9 @@ export const salariesData = [
 ];
 
 export const summaryData = [
-    { "displayName": "Total Salary", "value": "12000" },
-    { "displayName": "Total OT", "value": "2000" },
-    { "displayName": "Total Advance", "value": "5000" },
-    { "displayName": "Total Deduction", "value": "1000" },
-    { "displayName": "Total Pay", "value": "13000" },
+    { "displayName": "Total Salary", "value": "" },
+    { "displayName": "Total OT", "value": "" },
+    { "displayName": "Total Advance", "value": "" },
+    { "displayName": "Total Deduction", "value": "" },
+    { "displayName": "Total Pay", "value": "" },
 ];

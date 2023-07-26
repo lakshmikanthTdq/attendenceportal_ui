@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import "./Salaries.css";
 import RightsidePannel from "../RightsidePannel/RightsidePannel";
 import { DynamicTable } from '../../components/DynamicTable/DynamicTable';
-import {salariescolumns,salariesData,summaryData} from '../../_localdata/salariesdata'
+import {salariescolumns,salariesData,summaryData} from '../../_localdata/salariesdata';
+
 const CustomermanagementView = () => {
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const [HandlerType, setHandlerType] = useState("entry");
@@ -37,7 +38,7 @@ const CustomermanagementView = () => {
     else if (type === "advance") {
       console.log("advance", object)
       setIsRightsidePannel(true);
-      // setHandlerType("summary")
+      setHandlerType("summary")
     }
   }
   const onChangeSearchHandler = (keyword) => {
@@ -61,9 +62,11 @@ const CustomermanagementView = () => {
           <p>SALARIES</p>
         </Space>
         <Space size="middle" className="salarybuttons">
-          {/* <Button onClick={() => { setIsRightsidePannel(true); setHandlerType("summary"); setPannelTitle("Summary Report");
-      setActionBtn("Update") }} className="seesummarybtn" > See Summary</Button> */}
-          <Button  className="seesummarybtn" > See Summary</Button>
+          <Button onClick={() => { setIsRightsidePannel(true); 
+          setHandlerType("summary"); 
+          setPannelTitle("Summary Report");
+          setActionBtn("Update") }} className="seesummarybtn" > See Summary</Button>
+          {/* <Button  className="seesummarybtn" > See Summary</Button> */}
 
           <Button className="seesummarybtn">Finalise Payroll</Button>
         </Space>
@@ -73,7 +76,7 @@ const CustomermanagementView = () => {
           setIsRightsidePannel(true);
           setPannelTitle("Add New Entry")
           setActionBtn("Save")
-          // setHandlerType("entry")
+          setHandlerType("entry")
         }}
       >
         <IoAddCircle className='addicon' />
@@ -94,6 +97,7 @@ const CustomermanagementView = () => {
             <ComponentRenderData
               onReceivechildProps={onReceivePropsHandler}
               actionbtn={actionBtn}
+              handler={HandlerType}
             />
           }
           componentLayout={pannelTitle}
@@ -107,7 +111,7 @@ const CustomermanagementView = () => {
 };
 
 const ComponentRenderData = (props) => {
-  // if (props.handler === "entry") {
+  if (props.handler === "entry") {
     return (
       <>
 
@@ -187,26 +191,26 @@ const ComponentRenderData = (props) => {
         </Button>
       </>
     );
-  // } else if (props.handler === "summary") {
-  //   return (
-  //     <>
-  //     <div >
-  //       <table className="seesummarytxt1">
-  //       {summaryData.map((elem)=>{
-  //         return (
-  //           <tr>
-  //             <th>{elem.displayName}</th>
-  //             <td>:</td>
-  //             <td>{elem.value}</td>
-  //           </tr>
-  //         )})
-  //     }
-  //     </table>
-  //       </div>
+  } else if (props.handler === "summary") {
+    return (
+      <>
+      <div >
+        <table className="seesummarytxt1">
+        {summaryData.map((elem)=>{
+          return (
+            <tr>
+              <th>{elem.displayName}</th>
+              <td>:</td>
+              <td>{elem.value}</td>
+            </tr>
+          )})
+      }
+      </table>
+        </div>
 
-  //     </>
-  //   )
-  // }
+      </>
+    )
+  }
 };
 
 export default CustomermanagementView;

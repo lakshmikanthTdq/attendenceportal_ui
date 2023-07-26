@@ -62,6 +62,10 @@ table.seesummarytxt1 {
   color: #1a2b6d;
 }
 table.seesummarytxt1 th{
-  width: 250px;
+  width: 200px;
   text-align: left;
+}
+table.seesummarytxt1 td{
+  width: 100px;
+  text-align: center;
 }
