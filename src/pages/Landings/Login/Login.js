@@ -30,11 +30,11 @@ function Login() {
       <aside>n
         <h1>Welcome !</h1>
       </aside>
-      <img className="threecircles" src="/assests/threecircleslogin.svg"></img>
+      <img className="threecircles" src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/threecircleslogin.svg"></img>
       <aside>
         <section className="fieldssection">
-          <img src="/assests/tdq.png"></img> <br></br>
-          <img src="/assests/loginusericon.svg"></img>
+          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdq.png"></img> <br></br>
+          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/loginusericon.svg"></img>
           <h2>Log In</h2>
 
           <Form form={form} name="dynamic_rule">

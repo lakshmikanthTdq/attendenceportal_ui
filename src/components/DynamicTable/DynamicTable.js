@@ -72,7 +72,7 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
         <Space>
           <div className="trUserIcon">
             {obj.nameImg !== "" ? 
-            <img src={`/assests/${obj.nameImg}`} alt={obj.name} />
+            <img src={`https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/${obj.nameImg}`} alt={obj.name} />
             : ''
           }
           </div>

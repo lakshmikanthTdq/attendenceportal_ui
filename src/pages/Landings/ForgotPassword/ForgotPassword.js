@@ -25,11 +25,11 @@ function ForgotPassword() {
         <aside>
           <h1>Welcome !</h1>
         </aside>
-        <img className="threecircles" src="/assests/threecircleslogin.svg"></img>
+        <img className="threecircles" src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/threecircleslogin.svg"></img>
         <aside>
           <section className="fieldssection">
-          <img src="/assests/tdq.png" alt="tdqlogo"></img> <br></br>
-            <img src="/assests/loginusericon.svg" alt="user"></img>
+          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdq.png" alt="tdqlogo"></img> <br></br>
+            <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/loginusericon.svg" alt="user"></img>
             <h2>Forgot Password</h2>
             <Form form={form} name="dynamic_rule">
             <Form.Item

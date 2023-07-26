@@ -9,7 +9,7 @@ const PageNotFound = ({error, resetErrorBoundary}) => {
   return (
     <div className='pageNotfound'>
       <div className="pageNotfoundContent">
-        <img src="/assests/pagenotfound.png" width="800px" />
+        <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/pagenotfound.png" width="800px" />
         <h1>Page Not Found</h1>
         <p>{error?.message ? error.message: ''}</p>
         <Button type="primary"

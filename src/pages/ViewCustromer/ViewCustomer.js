@@ -79,7 +79,7 @@ const ViewCustomer = () => {
             <Space size="small">
            
 
-              <img src={`/assests/user_icon.png`} alt="userprofileicon" className="trUserIcon2" />
+              <img src={`https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/user_icon.png`} alt="userprofileicon" className="trUserIcon2" />
               <p>Biryani and More</p>
           
              

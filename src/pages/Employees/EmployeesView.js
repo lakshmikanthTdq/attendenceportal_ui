@@ -155,7 +155,7 @@ const [addadvance,setAddAdvance]=useState(false)
           <div>
             <div className="trUserIcon1">
 
-              <img src={`/assests/user_icon.png`} alt="userprofileicon" />
+              <img src={`https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/user_icon.png`} alt="userprofileicon" />
 
             </div>
             <div className="attendaceedittxt">

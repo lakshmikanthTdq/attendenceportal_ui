@@ -6,7 +6,7 @@ function LandingPage() {
 
   return (
     <div className="landing">
-      <img src="/assests/landingbackground.png" alt="profile" />
+      <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/landingbackground.png" alt="profile" />
 
 
       <div className="widgets">
@@ -212,7 +212,7 @@ function LandingPage() {
 
       <div className="arrow">
         <div></div>
-        <img src="/assests/peoplearrowicon.png" alt="arrowicon" />
+        <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/peoplearrowicon.png" alt="arrowicon" />
       </div>
     </div>
   );

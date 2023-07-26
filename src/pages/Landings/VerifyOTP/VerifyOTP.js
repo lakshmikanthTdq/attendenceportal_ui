@@ -14,10 +14,10 @@ function VerifyOTP() {
         <div>
           <h1>Welcome !</h1>
         </div>
-        <img className="threecircles" src="/assests/threecircleslogin.svg"></img>
+        <img className="threecircles" src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/threecircleslogin.svg"></img>
           <div className="otpfield">
            <section >
-           <img src="/assests/tdq.png" alt="tdqlogo"></img> <br></br>
+           <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdq.png" alt="tdqlogo"></img> <br></br>
             <h5>verification code sent to</h5> <h4>techdoquest@gmail.com</h4>
             <div className="otpboxes"> 
               <OtpInput 

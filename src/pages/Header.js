@@ -53,7 +53,7 @@ function Header() {
     <div className="header">
       <div className="tdqlogobackground">
         <img
-          src="/assests/tdqlogo.png"
+          src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdqlogo.png"
           alt="logo"
           className="tdqimage"
           onClick={() => {
