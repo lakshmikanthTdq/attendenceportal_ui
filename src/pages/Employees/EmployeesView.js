@@ -37,7 +37,7 @@ function EmployeesView() {
     else if(type === "advance"){
       console.log("advance", object)
       setIsRightsidePannel(true);
-      setHandlerType(true)
+      setHandlerType("summary")
     }
   }
   const onChangeSearchHandler = (keyword) => {
@@ -95,7 +95,7 @@ function EmployeesView() {
   );
 }
 const ComponentRenderData = (props) => {
-  
+   
   if (props.handler === "entry") {
 
 
@@ -158,6 +158,18 @@ const ComponentRenderData = (props) => {
       
 
     </div>
+   
+      <p className='totaloutstandingtxt'>
+        Total Outstanding
+      </p>
+      <div className='advancetxt'>
+        <p className='advanceno'>200000</p>
+      </div>
+      <Button type="" className="savebtn5" >Add Advance</Button>
+      <Input placeholder="Add New Advance" style={{ height: "50px", marginTop: "30px" }} />
+      <Input placeholder="Date" style={{ height: "50px", marginTop: "30px" }} />
+
+      <Button type="" className="savebtn1" >Save</Button>
 
     </>
   )
