@@ -15,16 +15,17 @@ const CustomermanagementView = () => {
   const [actionBtn, setActionBtn] = useState("Save");
   const navigate = useNavigate();
   const [finalData,setFinalData] = useState(salariescolumns)
-  const [final, setFinal] = useState(false);
+  const [finalpay, setFinalpay] = useState(false);
 
   useEffect(()=>{
-    if(final == true){
+    if(finalpay == true){
       let actionindex = finalData.findIndex(x => x.key === "action");
        finalData.splice(actionindex, 1);
       console.log(finalData);
       setFinalData(finalData);
+      config.isTableAction = false
     }
-   },[final])
+   },[finalpay])
 
   const onReceivePropsHandler = (pannel, load) => {
     if (load === "getFetch") {
@@ -78,7 +79,7 @@ const CustomermanagementView = () => {
           setActionBtn("Update") }} className="seesummarybtn" > See Summary</Button>
           {/* <Button  className="seesummarybtn" > See Summary</Button> */}
 
-          <Button className={final ? "Finalisebtngreen" : "seesummarybtn" } onClick={()=>{setFinal(true)}}>Finalise Payroll</Button>
+          <Button className={finalpay ? "Finalisebtngreen" : "seesummarybtn" } onClick={()=>{setFinalpay(true)}}>Finalise Payroll</Button>
         </Space>
       </div>
       <div className='addbussiness'
@@ -95,7 +96,7 @@ const CustomermanagementView = () => {
 
       <DynamicTable
         config={config}
-        columns={salariescolumns}
+        columns={finalData}
         data={salariesData}
         filterby={"Search by Business Name"}
         events={eventhandlers}
