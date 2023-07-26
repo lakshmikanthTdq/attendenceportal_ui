@@ -289,7 +289,7 @@ export const config = {
   isSorting: true,
   isPagination: true,
   isPaging: true,
-  isAdvance: true,
+  isAdvance: false,
   isSearchbox: true,
   isAction: true,
   isAddNew: true,

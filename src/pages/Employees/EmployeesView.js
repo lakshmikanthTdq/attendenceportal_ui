@@ -115,6 +115,7 @@ function EmployeesView() {
   );
 }
 const ComponentRenderData = (props) => {
+const [addadvance,setAddAdvance]=useState(false)
 
   if (props.handler === "entry") {
 
@@ -196,11 +197,14 @@ const ComponentRenderData = (props) => {
       <div className='advancetxt'>
         <p className='advanceno'>200000</p>
       </div>
-      <Button type="" className="addadvance" >Add Advance</Button>
+      <Button type="" className="addadvance" onClick={()=>setAddAdvance(true)} >Add Advance</Button>
+      {addadvance ? (
+<>
       <Input placeholder="Add New Advance" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Date" style={{ height: "50px", marginTop: "30px" }} />
 
-      <Button type="" className="advancesavebtn" >Save</Button>
+      <Button type="" className="advancesavebtn" onClick={() => props.onReceivechildProps(false, "close")}  >Save</Button> </>
+      ) :""}
 
     </>
   )

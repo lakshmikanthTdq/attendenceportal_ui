@@ -138,9 +138,13 @@
     height: 34px;
     gap: 10px;
     justify-content: end;
-    margin-left: 1675px;
+    margin-left: 1650px;
     cursor: pointer;
     position: absolute;
+    padding-right: 5px;
+}
+.addbusinesstext{
+    margin-top: 5px;
 }
 /* .addbusinesstext{
     margin-top: 3px;
