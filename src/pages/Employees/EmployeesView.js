@@ -178,7 +178,7 @@ const ComponentRenderData = (props) => {
 
         </div>
 
-        <p className='totaloutstandingtxt'>
+        {/* <p className='totaloutstandingtxt'>
           Total Outstanding
         </p>
         <div className='advancetxt'>
@@ -186,9 +186,9 @@ const ComponentRenderData = (props) => {
         </div>
         <Button type="" className="savebtn5" >Add Advance</Button>
         <Input placeholder="Add New Advance" style={{ height: "50px", marginTop: "30px" }} />
-        <Input placeholder="Date" style={{ height: "50px", marginTop: "30px" }} />
+        <Input placeholder="Date" style={{ height: "50px", marginTop: "30px" }} /> */}
 
-    </div>
+    
    
       <p className='totaloutstandingtxt'>
         Total Outstanding
