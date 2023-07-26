@@ -11,35 +11,13 @@ import { OutletsColumns, OutletsData, UserInfoColumns, UserInfoData } from "../.
 import "./ViewCustomer.css";
 import { RiEditBoxFill } from "react-icons/ri";
 
-const onChangeTableHandler = (type, object) => {
-  if (type === "edit") {
-    console.log("edit", object);
-  } else if (type === "delete") {
-    console.log("delete", object);
-  } else if (type === "advance") {
-    console.log("advance", object);
-  }
-};
-
-
-const onChangeSearchHandler = (keyword) => { };
-
-const onFilterHandler = (type) => { };
-
-const eventhandlers = {
-  onTableHandler: onChangeTableHandler,
-  onSearchHandler: onChangeSearchHandler,
-  onFilterHandler: onFilterHandler,
-};
-const onChange = (key) => {
-  console.log("key >>>>>>", key);
-};
 
 const ViewCustomer = () => {
   const navigate = useNavigate();
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const [pannelTitle, setPannelTitle] = useState("Edit Business");
   const [actionBtn, setActionBtn] = useState("Update");
+  const [activetab, setActivetab] = useState("1")
 
   const onReceivePropsHandler = (pannel, load) => {
     if (load === "getFetch") {
@@ -47,6 +25,34 @@ const ViewCustomer = () => {
     } else if (load === "close") {
       setIsRightsidePannel(pannel);
     }
+  }
+
+  const onChangeTableHandler = (type, object) => {
+    if (type === "edit") {
+      console.log("edit", object);
+    } else if (type === "delete") {
+      console.log("delete", object);
+    } else if (type === "advance") {
+      console.log("advance", object);
+    }
+  };
+  
+  
+  const onChangeSearchHandler = (keyword) => { };
+  
+  const onFilterHandler = (type) => { };
+  
+  const eventhandlers = {
+    onTableHandler: onChangeTableHandler,
+    onSearchHandler: onChangeSearchHandler,
+    onFilterHandler: onFilterHandler,
+  };
+  const onChange = (key) => {
+    setActivetab(key);
+  };
+
+  const onClickMethod = () => {
+    alert("hai");
   }
   const items = [
     {
@@ -76,11 +82,11 @@ const ViewCustomer = () => {
             </div>
 
             <div className="viewcustomercards">
-              <div className="customercard">
+              <div className="customercard" onClick={() => {onChange("2")}}>
                 <p>Outlets</p>
                 <span>43</span>
               </div>
-              <div className="customercard">
+              <div className="customercard" onClick={() => {onChange("3")}}>
                 <p>Users</p>
                 <span>62</span>
               </div>
@@ -154,7 +160,7 @@ const ViewCustomer = () => {
       </div>
       <div className="tablecard">
         <div className="attendancetabs">
-          <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+          <Tabs activeKey={activetab} items={items} onChange={onChange} />
         </div>
       </div>
       {isRightsidePannel ? (
