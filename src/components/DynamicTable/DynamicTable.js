@@ -46,22 +46,24 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
 
   let actionIndex = columns.findIndex(x => x.dataIndex === "action");
   if (actionIndex !== -1) {
-    columns[actionIndex]["render"] = (_, obj) => (
-      <Space className="tableActionIcons">
-        <Tooltip placement="top" title="Edit" >
-          <MdEditSquare onClick={() => events.onTableHandler("edit", obj)} className="editicon" />
-        </Tooltip>
-        <Tooltip placement="top" title="Delete">
-          <MdDelete onClick={showModal} className="deleteicon"
-          />
-        </Tooltip>
-        <span className={config.isAdvance === true ? "" : "d-none"}>
-          <Tooltip placement="top" title="Advance">
-            <BiSolidDollarCircle onClick={() => events.onTableHandler("advance", obj)} className="dolloricon" />
+    if(config.isTableAction === true){
+      columns[actionIndex]["render"] = (_, obj) => (
+        <Space className="tableActionIcons">
+          <Tooltip placement="top" title="Edit" >
+            <MdEditSquare onClick={() => events.onTableHandler("edit", obj)} className="editicon" />
           </Tooltip>
-        </span>
-      </Space>
-    )
+          <Tooltip placement="top" title="Delete">
+            <MdDelete onClick={showModal} className="deleteicon"
+            />
+          </Tooltip>
+          <span className={config.isAdvance === true ? "" : "d-none"}>
+            <Tooltip placement="top" title="Advance">
+              <BiSolidDollarCircle onClick={() => events.onTableHandler("advance", obj)} className="dolloricon" />
+            </Tooltip>
+          </span>
+        </Space>
+      )
+    }
   }
 
   let userIndex = columns.findIndex(x => x.dataIndex === "name");
