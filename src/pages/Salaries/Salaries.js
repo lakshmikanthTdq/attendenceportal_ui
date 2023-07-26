@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoAddCircle } from "react-icons/io5";
 import { GoPersonFill } from "react-icons/go";
-import { Button, Input, Space } from "antd";
+import { Button, Input, Space,Form } from "antd";
 import { useNavigate } from "react-router-dom";
 import "./Salaries.css";
 import RightsidePannel from "../RightsidePannel/RightsidePannel";
@@ -29,7 +29,7 @@ const CustomermanagementView = () => {
       setIsRightsidePannel(true);
       setPannelTitle("Edit Employee Pay")
       setActionBtn("Update")
-
+      setHandlerType("edit")
     }
     else if (type === "delete") {
       console.log("delete", object)
@@ -186,7 +186,7 @@ const ComponentRenderData = (props) => {
           }}
         />
 
-        <Button type="" className="savebtn1" onClick={() => props.onReceivechildProps(false, "close")}>
+        <Button type="" className="addsalarybtn" onClick={() => props.onReceivechildProps(false, "close")}>
         {props.actionbtn}
         </Button>
       </>
@@ -209,6 +209,59 @@ const ComponentRenderData = (props) => {
         </div>
 
       </>
+    )
+  }  else if (props.handler === "edit") {
+    return (
+    <div className="editcontentcss">
+       <Form
+        labelCol={{
+          span: 8,
+        }}
+        wrapperCol={{
+          span: 14,
+        }}
+        layout="horizontal"
+        style={{
+          maxWidth: 600,
+        }}
+      >
+        <Form.Item label="Name">
+          <Input />
+        </Form.Item>
+        <Form.Item label="Days">
+          <Input />
+        </Form.Item>
+        <Form.Item label="No of OT">
+          <Input />
+        </Form.Item>
+        <Form.Item label="Salary">
+          <Input />
+        </Form.Item>
+        <Form.Item label="OT">
+          <Input />
+        </Form.Item>
+        <Form.Item label="Advance">
+          <Input />
+        </Form.Item>
+        <Form.Item label="Remaining">
+          <Input />
+        </Form.Item> 
+        <Form.Item label="Deduction">
+          <Input />
+        </Form.Item> 
+        <Form.Item label="Total Pay">
+          <Input />
+        </Form.Item>
+        <Form.Item label="Pay By">
+          <Input />
+        </Form.Item>
+
+      </Form>
+      <Button type="" className="editsalarybtn" onClick={() => props.onReceivechildProps(false, "close")}>
+        {props.actionbtn}
+        </Button>
+
+    </div>
     )
   }
 };

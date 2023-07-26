@@ -105,8 +105,8 @@ align-items: center;
     opacity: 1;
  
   }
-  .savebtn5{
-    margin-top: 100px !important;
+  .addadvance{
+    margin-top: 90px !important;
     width:200px !important;
     background: #1A2B6D 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -116,8 +116,19 @@ align-items: center;
     height: 60px;
     font-size: 20px;
 }
-.savebtn1 {
-  margin-top: 155px !important;
+.employeesavebtn {
+  margin-top: 50px !important;
+  width: 350px;
+  background: #1a2b6d 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+  color: #fff;
+  height: 60px;
+  font-size: 20px;
+}
+.advancesavebtn {
+  margin-top: 160px !important;
   width: 350px;
   background: #1a2b6d 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;

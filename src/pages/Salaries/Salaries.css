@@ -5,8 +5,8 @@
 .useraddicontxt {
   margin-top: 0px;
 }
-.savebtn1 {
-  margin-top: 35px;
+.addsalarybtn {
+  margin-top: 70px;
   width: 350px;
   background: #1a2b6d 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
@@ -77,11 +77,19 @@ table.seesummarytxt1 td{
 .editcontentcss label{
   font-size: 22px !important;
   color: #1a2b6d !important;
+  width: 250px !important;
+  display: flex !important;
+  justify-content: space-between;
 }
-.editcontentcss .ant-form-item .ant-form-item-label{
-  text-align: left !important;
+.editsalarybtn{
+  margin-top: 70px;
+  width:350px;
+  background: #1A2B6D 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 20px;
+  opacity: 1;
+  color: #fff;
+  height: 60px;
+  font-size: 20px;
 }
-.editcontentcss label::after{
-  margin: 0px 8px 0px 85px !important;
-  /* text-align: right !important; */
-}
+

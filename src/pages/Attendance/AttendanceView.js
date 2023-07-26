@@ -242,7 +242,7 @@ const ComponentRenderData = (props) => {
       <Input placeholder="Total Hours" style={{ height: "50px", marginTop: "40px", width: 250,marginRight:"270px" }} />
       </ Space>
       </div>
-      <Button type="" className="savebtn5" onClick={() => props.onReceivechildProps(false, "close")} >Save </Button>
+      <Button type="" className="attendancesavebtn" onClick={() => props.onReceivechildProps(false, "close")} >Save </Button>
 
 
     </>

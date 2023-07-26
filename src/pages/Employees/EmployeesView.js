@@ -144,7 +144,7 @@ const ComponentRenderData = (props) => {
       <Input placeholder="Job Title" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Job Type" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Employee ID" style={{ height: "50px", marginTop: "30px" }} />
-      <Button type="" className="savebtn2" onClick={() => props.onReceivechildProps(false, "close")}>{props.actionbtn} </Button>
+      <Button type="" className="employeesavebtn" onClick={() => props.onReceivechildProps(false, "close")}>{props.actionbtn} </Button>
     </>
   );
   } else if (props.handler === "advance") {
@@ -184,11 +184,11 @@ const ComponentRenderData = (props) => {
       <div className='advancetxt'>
         <p className='advanceno'>200000</p>
       </div>
-      <Button type="" className="savebtn5" >Add Advance</Button>
+      <Button type="" className="addadvance" >Add Advance</Button>
       <Input placeholder="Add New Advance" style={{ height: "50px", marginTop: "30px" }} />
       <Input placeholder="Date" style={{ height: "50px", marginTop: "30px" }} />
 
-      <Button type="" className="savebtn1" >Save</Button>
+      <Button type="" className="advancesavebtn" >Save</Button>
 
     </>
   )
