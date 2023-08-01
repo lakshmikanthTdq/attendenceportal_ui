@@ -26,9 +26,8 @@ const customWeekStartEndFormat = (value) =>
   `${dayjs(value).startOf("week").format(weekFormat)} ~ ${dayjs(value)
     .endOf("week")
     .format(weekFormat)}`;
-const onChange = (key) => {
-  console.log(key);
-};
+
+
 
 function AttendanceView() {
 
@@ -36,6 +35,16 @@ function AttendanceView() {
   const [isRightsidePannel, setIsRightsidePannel] = useState(false);
   const [pannelTitle, setPannelTitle] = useState("Add Business");
   const [actionBtn, setActionBtn] = useState("Save");
+  const [HandlerType, setHandlerType] = useState("daily");
+
+  const onChange = (key) => {
+    console.log(key);
+    if(key === "1"){
+      setHandlerType("daily")
+    } else {
+      setHandlerType("weekly")
+    }
+  };
 
   const onChangeTableHandler = (type, object) => {
     if (type === "edit") {
@@ -99,7 +108,7 @@ function AttendanceView() {
             config={config}
             columns={attendenceDailycolumns}
             data={attendenceDailyData}
-            filterby={"Search by Business Name"}
+            filterby={"Search by Keyword"}
             events={eventhandlers}
           />
         </>
@@ -128,7 +137,7 @@ function AttendanceView() {
             config={config}
             columns={weeklyMonthlycolumns}
             data={weeklyMonthlyData}
-            filterby={"Search by Business Name"}
+            filterby={"Search by Keyword"}
             events={eventhandlers}
           />
         </>
@@ -157,7 +166,7 @@ function AttendanceView() {
             config={config}
             columns={weeklyMonthlycolumns}
             data={weeklyMonthlyData}
-            filterby={"Search by Business Name"}
+            filterby={"Search by Keyword"}
             events={eventhandlers}
           />
         </>
@@ -184,6 +193,7 @@ function AttendanceView() {
             <ComponentRenderData
             onReceivechildProps={onReceivePropsHandler}
             actionbtn={actionBtn}
+            handler={HandlerType}
           />
         }
         componentLayout={pannelTitle}
@@ -199,55 +209,100 @@ function AttendanceView() {
 }
 const ComponentRenderData = (props) => {
 
-
+  if (props.handler === "daily") {
   return (
     <>
-     
     <div className="salarieseditbox">
       <div>
-      <div className="trUserIcon1">
-           
-            <img src={`https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/user_icon.png`} alt="userprofileicon" />
-           
-          </div>
-          <div className="attendaceedittxt">
-
-        <p className="salariesedittext1">
-          Chandu
-        </p>
-        <p className="salariesedittext2">
-          Outlet 03
-        </p>
+        <div className="trUserIcon1">
+          <img src={`https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/user_icon.png`} alt="userprofileicon" />
         </div>
+          
+        <div className="attendaceedittxt">
+          <p className="salariesedittext1">
+            Chandu
+          </p>
+          <p className="salariesedittext2">
+            Outlet 03
+          </p>
         </div>
+      </div>
 
-        <div>
+      <div>
         <p className="salariesedittext3">
           Part-Time
         </p>
-       
       </div>
       
-
     </div>
+    
     <div className="atendancefeildsedit">
-    < Space size="large" >
-        <Input placeholder="Start Time" style={{ height: "50px", marginTop: "40px", width: 250 }} />
-        <Input placeholder="End Time" style={{ height: "50px", marginTop: "40px", width: 250 }} />
+    
+       <div className="timefields">
+        <label for="Start Time">Start Time</label>
+        <Input placeholder="Start Time" bordered={false} className="timefieldtext"  />
+       </div>
+       <div className="timefields">
+          <label for="End Time">End Time</label>
+          <Input placeholder="End Time" bordered={false} className="timefieldtext" />
+        </div>
+        <div className="timefields" style={{marginTop:"40px"}}>
+          <label for="Total Hours">Total Hours</label>
+          <Input placeholder="Total Hours" bordered={false} className="timefieldtext" />
+        </div>
+    </div>
 
-
-      </ Space>
-    < Space size="large" >
-
-      <Input placeholder="Total Hours" style={{ height: "50px", marginTop: "40px", width: 250,marginRight:"270px" }} />
-      </ Space>
-      </div>
       <Button type="" className="attendancesavebtn" onClick={() => props.onReceivechildProps(false, "close")} >Save </Button>
-
-
     </>
   );
-};
+  } else {
+  return (
+    <>
+    <div className="salarieseditbox">
+      <div>
+        <div className="trUserIcon1">
+          <img src={`/assests/user_icon.png`} alt="userprofileicon" />
+        </div>
+          
+        <div className="attendaceedittxt">
+          <p className="salariesedittext1">
+            Chandu
+          </p>
+          <p className="salariesedittext2">
+            Outlet 03
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p className="salariesedittext3">
+          Part-Time
+        </p>
+      </div>
+      
+    </div>
+    
+    <div className="atendancefeildsedit">
+    
+       <div className="timefields">
+        <label for="Regular Time">Regular Time</label>
+        <Input placeholder="Regular Time" bordered={false} className="timefieldtext"  />
+       </div>
+        <div className="timefields" >
+          <label for="Overtime Hours">Overtime Hours</label>
+          <Input placeholder="Overtime Hours" bordered={false} className="timefieldtext" />
+        </div>
+       <div className="timefields" style={{marginTop:"40px"}}>
+          <label for="Total hours">Total hours</label>
+          <Input placeholder="Total hours" bordered={false} className="timefieldtext" />
+        </div>
+    </div>
+
+      <Button type="" className="attendancesavebtn" onClick={() => props.onReceivechildProps(false, "close")} >Save </Button>
+    </>
+  );
+}
+} 
 
 
 export default AttendanceView;
@@ -255,7 +310,7 @@ export default AttendanceView;
 const pannelobj = {
   title: "Employee Details ",
   description: "",
-  // bgImage: "/assests/img/AddDocumentsIcon.svg",
+  // bgImage: "https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/img/AddDocumentsIcon.svg",
 };
 
 export const config = {

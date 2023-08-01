@@ -24,25 +24,25 @@ function Header() {
 
   const selectList= [
     {
-      value: 'Customer Management',
-      label: 'Customer Management',
+      value: 'Business01',
+      label: 'Business01',
     },
     {
-      value: 'Employees',
-      label: 'Employees',
+      value: 'Business02',
+      label: 'Business02',
     },
     {
-      value: 'Attendance',
-      label: 'Attendance',
+      value: 'Business03',
+      label: 'Business03',
     },
     {
-      value: 'Reports',
-      label: 'Reports',
+      value: 'Business04',
+      label: 'Business04',
     },
-    {
-      value: 'Salaries',
-      label: 'Salaries',
-    },
+    // {
+    //   value: 'Business05',
+    //   label: 'Business05',
+    // },
   ];
 
   const handleChange = (value) => {
@@ -62,21 +62,22 @@ function Header() {
         />
       </div>
       
-    <Select className="headerselectcomp"
+
+
+      <Space size="large">
+     <Select className="headerselectcomp"
       defaultValue=""
       style={{
-        width: 220,marginRight: "-1250px"
+        width: 220,
       }}
       onChange={handleChange}
       options={selectList}
     />
-
-      <Space size="large">
         <Badge count={5}>
           
-          <BiSolidBell style={{ color: "#FFFFFF", fontSize: "30px" }} />
+          <BiSolidBell style={{ color: "#FFFFFF", fontSize: "40px" }} />
         </Badge>
-        <IoMdSettings style={{ color: "#FFFFFF", fontSize: "30px" }} />
+        <IoMdSettings style={{ color: "#FFFFFF", fontSize: "40px" }} />
         <Dropdown
           menu={{
             items,
@@ -84,7 +85,7 @@ function Header() {
         >
           <a onClick={(e) => e.preventDefault()}>
             <Space>
-              <IoPersonCircle style={{ color: "#FFFFFF", fontSize: "30px" }}  />
+              <IoPersonCircle style={{ color: "#FFFFFF", fontSize: "40px" }}  />
               
             </Space>
           </a>

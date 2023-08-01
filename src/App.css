@@ -5,8 +5,8 @@
     margin-top: -16px;
     border-radius:0 0 30px 30px;
     display: flex;
-    justify-content:space-between;
-    align-items: center;
+    justify-content:space-between !important;
+    align-items: center !important;
 }
 
 .headerselectcomp .ant-select-selector{
@@ -21,7 +21,7 @@
 .tdqimage {
     cursor: pointer;
     margin-top: 37px;
-    width: 102px;
+    width: 125px;
 }
 
 .tdqlogobackground {
@@ -39,14 +39,19 @@
     width: 100vw;
     height: calc(100vh - 92px);
     overflow: hidden;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    /* border-radius: 20px; */
+}
+.landing .backgroundimg{
+    width: 100%;
 }
 
 .widgets {
     position: absolute;
     top: 13%;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
 }
 
 .widgets h2{
@@ -57,7 +62,8 @@
 
 .widgets section{
     display: flex;
-    gap: 80px;
+    /* gap: 90px !important; */
+    gap: 12vh;
 }
 
 .widgets .card {
@@ -82,7 +88,7 @@
 
 .widgets .card p {
     margin-top: 15px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     text-align: center !important;
 }
 
@@ -120,6 +126,99 @@
     width: 82px;
     margin: 35px auto 0;
 }
+
+
+/* @media only screen and (max-width:1200px){
+    .widgets .card{
+       width: 100px;
+       height: 100px;
+    }
+} */
+  @media only screen and (min-width: 1200px) {
+    
+    
+    .arrow img {
+        width: 15%;
+    }
+  }
+  /* @media only screen and (min-width: 1200px) {
+    .widgets section {
+        gap: 30px;
+    }
+    .arrow img {
+        width: 15%;
+    }
+  } */
+
+  /* @media only screen and (min-width: 992px) {
+       .widgets{
+        width: 80%;
+    }
+    .widgets section {
+        gap: 30px;
+        
+    }
+    .arrow img {
+        width: 15%;
+    }
+    .widgets .card p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+  
+  } 
+  @media only screen and (min-width: 768px) {
+    .widgets{
+        width: 80%;
+    }
+    .widgets section {
+        gap: 30px;
+        
+    }
+    .arrow img {
+        width: 15%;
+    }
+    .widgets .card p {
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 4px;
+    }
+    .widgets svg {
+        width: 80%;
+    }
+    .widgets .card{
+    height: 150px;
+    }
+    .svgimages {
+        margin: 10px auto 0;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .widgets{
+        width: 80%;
+    }
+    .widgets section {
+        gap: 30px;
+    }
+    .arrow img {
+        width: 15%;
+    }
+    .widgets .card p {
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 4px;
+    }
+    .widgets svg {
+        width: 70%;
+    }
+    .widgets .card{
+    height: 140px;
+    }
+    .svgimages {
+        margin: 10px auto 0;
+    }
+  } */
+/* ////////////////////////////////////////////////////// */
 
 .ant-table-wrapper table tr th.ant-table-selection-column::after {
     background-color: inherit !important;

@@ -47,7 +47,10 @@
 }
 
 .otpfield section{
-    margin-top: -155px;
+    margin-top: -8%;
+}
+ .otpfield section img{
+    width: 46%;
 }
 .otpfield section h5{
     margin-top: 100px;

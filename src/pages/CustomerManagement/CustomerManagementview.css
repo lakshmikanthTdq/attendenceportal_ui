@@ -7,7 +7,20 @@
 }
 
 .savebtn{
-    margin-top: 190px;
+    margin-top: 75px;
+    width:350px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    opacity: 1;
+    color: #1A2B6D;
+    height: 60px;
+    font-size: 20px;
+    border: 2px solid #1A2B6D;
+}
+
+.savebtn:hover{
+    /* margin-top: 75px; */
     width:350px;
     background: #1A2B6D 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -38,4 +51,7 @@ align-items: center;
 }
 .addbusinesstext{
     margin-top: 5px;
+}
+.countrystate span.ant-select-selection-item{
+    color:#DEDEDE !important
 }

@@ -28,7 +28,7 @@ function ForgotPassword() {
         <img className="threecircles" src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/threecircleslogin.svg"></img>
         <aside>
           <section className="fieldssection">
-          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdq.png" alt="tdqlogo"></img> <br></br>
+          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdqlogonobg1.png" alt="tdqlogo"></img> <br></br>
             <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/loginusericon.svg" alt="user"></img>
             <h2>Forgot Password</h2>
             <Form form={form} name="dynamic_rule">
@@ -74,10 +74,12 @@ function ForgotPassword() {
            }}
            />
            </Form.Item>
+           <Form.Item>
+            <Button type="" className="logbtn" onClick={() => { onSubmit() }}>Submit</Button>
+           </Form.Item>
             </Form>
           </section>
            
-            <Button type="" className="logbtn" onClick={() => { onSubmit() }}>Submit</Button>
              
         </aside>
       </div>

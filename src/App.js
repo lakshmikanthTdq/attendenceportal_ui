@@ -29,7 +29,7 @@ function App() {
         <Route path="salaries/view" element={<Salaries />} />
         <Route path="viewcustomer/view" element={<ViewCustomer />} />
       </Route>
-      <Route path="*" element={<Login />} />   
+      <Route path="*" element={<PageNotFound />} />   
     </Routes>
   );
 }

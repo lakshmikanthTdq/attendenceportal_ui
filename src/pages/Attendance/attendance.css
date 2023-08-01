@@ -121,20 +121,52 @@ opacity: 1;
 padding-top: 35px;
 }
 .attendancesavebtn{
-  margin-top: 430px;
+  margin-top: 400px;
   width:350px;
-  background: #1A2B6D 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 20px;
   opacity: 1;
-  color: #fff;
+  color: #1A2B6D;
   height: 60px;
   font-size: 20px;
+  border: 2px solid #1A2B6D;
 }
-.atendancefeildsedit input.ant-input,.atendancefeildsedit input.ant-input:focus {
-  border: none!important;
-  box-shadow: none!important;
+.attendancesavebtn:hover{
+  background: #1A2B6D 0% 0% no-repeat padding-box;
+  color: #fff;
 }
+
+.atendancefeildsedit {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+.atendancefeildsedit label{
+  width: 150px;
+  text-align: left;
+  color: #1A2B6D;
+  font-size: 20px;
+  font-family: Nunito;
+  font-weight: bold;
+  
+}
+.atendancefeildsedit label{
+  text-decoration-line: overline;
+}
+.timefields{
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+}
+.timefieldtext{
+  height: 30px;
+  width: 250;
+  padding: 4px 0px; 
+  font-Size:20px;
+}
+
 .trUserIcon1 {
   width: 55px;
   height: 55px;

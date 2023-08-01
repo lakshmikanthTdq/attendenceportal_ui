@@ -27,13 +27,13 @@ function Login() {
 
   return (
     <div className="loginbackground">
-      <aside>n
+      <aside>
         <h1>Welcome !</h1>
       </aside>
       <img className="threecircles" src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/threecircleslogin.svg"></img>
       <aside>
         <section className="fieldssection">
-          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdq.png"></img> <br></br>
+          <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/tdqlogonobg1.png"></img> <br></br>
           <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/loginusericon.svg"></img>
           <h2>Log In</h2>
 

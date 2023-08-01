@@ -85,7 +85,7 @@ export function CustomermanagementView() {
         config={config}
         columns={customerManagementcolumns}
         data={customerManagementData}
-        filterby={"Search by Business Name"}
+        filterby={"Search by Keyword"}
         events={eventhandlers}
       />
 
@@ -114,7 +114,7 @@ const ComponentRenderData = (props) => {
 
   return (
     <>
-      {/* <img src="/assests/useraddicon.svg" alt="" /> */}
+      {/* <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/useraddicon.svg" alt="" /> */}
       <div>
         <svg id="_x32_9_Change_Picture" xmlns="http://www.w3.org/2000/svg" width="72" height="75.316" viewBox="0 0 72 75.316">
           <g id="Group_5230" data-name="Group 5230" transform="translate(0 0)">
@@ -134,11 +134,11 @@ const ComponentRenderData = (props) => {
       <Input placeholder="Name" style={{ height: "50px" }} />
       <Input placeholder="Street Address" style={{ height: "50px", marginTop: "30px" }} />
       < Space size="large" >
-        <Select
+        <Select className='countrystate'
           size="large"
           defaultValue="Country"
           style={{
-            width: 250, marginTop: "40px",
+            width: 250, marginTop: "40px" ,color:"red",
           }}
           options={
             [{
@@ -155,7 +155,7 @@ const ComponentRenderData = (props) => {
             }]
           }
         />
-        <Select
+        <Select className='countrystate'
           size="large"
           defaultValue="State"
           style={{
@@ -180,7 +180,7 @@ const ComponentRenderData = (props) => {
       </ Space>
       < Space size="large" >
         <Input placeholder="Contact Person Details" style={{ height: "50px", marginTop: "40px", width: 250 }} />
-        <Input placeholder="Contact Person Details" style={{ height: "50px", marginTop: "40px", width: 250 }} />
+        <Input placeholder="URL" style={{ height: "50px", marginTop: "40px", width: 250 }} />
 
       </ Space>
       <Button type="" className="savebtn" onClick={() => props.onReceivechildProps(false, "close")} >{props.actionbtn} </Button>

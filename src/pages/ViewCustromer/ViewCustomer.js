@@ -36,7 +36,7 @@ const ViewCustomer = () => {
         setPannelTitle("Edit Outlet")
         setIsRightsidePannel(true);
         setActionBtn("Update")
-        setHandlerType("advance")
+        setHandlerType("edit")
       } else if(activetab === "3"){
         setPannelTitle("Edit User")
         setIsRightsidePannel(true);
@@ -47,8 +47,8 @@ const ViewCustomer = () => {
       
     } else if (type === "delete") {
       console.log("delete", object);
-    } else if (type === "advance") {
-      console.log("advance", object);
+    } else if (type === "edit") {
+      console.log("edit", object);
     }
   };
   
@@ -86,8 +86,8 @@ const ViewCustomer = () => {
             </Space>
             <Space size="small" onClick={() => {
               setIsRightsidePannel(true);
-              setPannelTitle("Add Outlet")
-              setActionBtn("Save")
+              setPannelTitle("Edit Business")
+              setActionBtn("Update")
               setHandlerType("entry")
             }}>
 
@@ -130,7 +130,7 @@ const ViewCustomer = () => {
               setIsRightsidePannel(true);
               setPannelTitle("Add Outlet")
               setActionBtn("Save")
-              setHandlerType("advance")
+              setHandlerType("edit")
             }}
           >
             <IoAddCircle className='addicon' />
@@ -140,7 +140,7 @@ const ViewCustomer = () => {
             config={Outletconfig}
             columns={OutletsColumns}
             data={OutletsData}
-            filterby={"Search by Business Name"}
+            filterby={"Search by Keyword"}
             events={eventhandlers}
           />
         </>
@@ -166,7 +166,7 @@ const ViewCustomer = () => {
             config={Userconfig}
             columns={UserInfoColumns}
             data={UserInfoData}
-            filterby={"Search by Business Name"}
+            filterby={"Search by Keyword"}
             events={eventhandlers}
           />
         </>
@@ -216,7 +216,7 @@ const ComponentRenderData = (props) => {
   return (
     
     <>
-      {/* <img src="/assests/useraddicon.svg" alt="" /> */}
+      {/* <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/useraddicon.svg" alt="" /> */}
       <div>
         <svg id="_x32_9_Change_Picture" xmlns="http://www.w3.org/2000/svg" width="72" height="75.316" viewBox="0 0 72 75.316">
           <g id="Group_5230" data-name="Group 5230" transform="translate(0 0)">
@@ -236,7 +236,7 @@ const ComponentRenderData = (props) => {
       <Input placeholder=" BusinessName" style={{ height: "50px" }} />
       <Input placeholder="Street Address" style={{ height: "50px", marginTop: "30px" }} />
       < Space size="large" >
-        <Select
+        <Select className='countrystate'
           size="large"
           defaultValue="Country"
           style={{
@@ -257,7 +257,7 @@ const ComponentRenderData = (props) => {
             }]
           }
         />
-        <Select
+        <Select className='countrystate'
           size="large"
           defaultValue="State"
           style={{
@@ -290,10 +290,10 @@ const ComponentRenderData = (props) => {
 
     </>
   );
-} else if (props.handler === "advance") {
+} else if (props.handler === "edit") {
   return(
     <>
-    {/* <img src="/assests/useraddicon.svg" alt="" /> */}
+    {/* <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/useraddicon.svg" alt="" /> */}
     <div>
       <svg id="_x32_9_Change_Picture" xmlns="http://www.w3.org/2000/svg" width="72" height="75.316" viewBox="0 0 72 75.316">
         <g id="Group_5230" data-name="Group 5230" transform="translate(0 0)">
@@ -313,7 +313,7 @@ const ComponentRenderData = (props) => {
     <Input placeholder=" Name" style={{ height: "50px" }} />
     <Input placeholder="Street Address" style={{ height: "50px", marginTop: "30px" }} />
     < Space size="large" >
-      <Select
+      <Select className='countrystate'
         size="large"
         defaultValue="Country"
         style={{
@@ -334,7 +334,7 @@ const ComponentRenderData = (props) => {
           }]
         }
       />
-      <Select
+      <Select className='countrystate'
         size="large"
         defaultValue="State"
         style={{
@@ -370,7 +370,7 @@ const ComponentRenderData = (props) => {
 } else if (props.handler === "userinfo") {
   return(
     <>
-      {/* <img src="/assests/useraddicon.svg" alt="" /> */}
+      {/* <img src="https://lakshmikanthtdq.github.io/attendenceportal_ui/assests/useraddicon.svg" alt="" /> */}
       <div>
         <svg id="_x32_9_Change_Picture" xmlns="http://www.w3.org/2000/svg" width="72" height="75.316" viewBox="0 0 72 75.316">
           <g id="Group_5230" data-name="Group 5230" transform="translate(0 0)">

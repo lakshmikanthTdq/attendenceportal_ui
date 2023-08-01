@@ -82,7 +82,7 @@ const CustomermanagementView = () => {
           <Button className={finalpay ? "Finalisebtngreen" : "seesummarybtn" } onClick={()=>{setFinalpay(true)}}>Finalise Payroll</Button>
         </Space>
       </div>
-      <div className='addbussiness'
+      <div className='addsalaries'
         onClick={() => {
           setIsRightsidePannel(true);
           setPannelTitle("Add New Entry")
@@ -98,7 +98,7 @@ const CustomermanagementView = () => {
         config={config}
         columns={finalData}
         data={salariesData}
-        filterby={"Search by Business Name"}
+        filterby={"Search by Keyword"}
         events={eventhandlers}
       />
 

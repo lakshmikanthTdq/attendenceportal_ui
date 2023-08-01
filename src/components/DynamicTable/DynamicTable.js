@@ -117,10 +117,10 @@ export function DynamicTable({ config, columns, data, filterby, events }) {
             style={{ width: 350 }}
             onChange={onhandleSelectChange}
             options={[
-              { value: 'jack', label: 'Jack' },
-              { value: 'lucy', label: 'Lucy' },
-              { value: 'Yiminghe', label: 'yiminghe' },
-              { value: 'disabled', label: 'Disabled', disabled: true },
+              { value: 'Outlet1', label: 'Outlet1' },
+              { value: 'Outlet2', label: 'Outlet2' },
+              { value: 'Outlet3', label: 'Outlet3' },
+              { value: 'Outlet4', label: 'Outlet4', disabled: true },
             ]}
           />
         }
