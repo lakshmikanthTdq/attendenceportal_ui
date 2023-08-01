@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/attendenceportal_ui/static/css/main.1515abda.css",
-    "main.js": "/attendenceportal_ui/static/js/main.d8488821.js",
+    "main.js": "/attendenceportal_ui/static/js/main.ca4fdc36.js",
     "static/js/787.074279c2.chunk.js": "/attendenceportal_ui/static/js/787.074279c2.chunk.js",
     "index.html": "/attendenceportal_ui/index.html",
     "static/media/corners.svg": "/attendenceportal_ui/static/media/corners.600a0490da95bff0d5b7.svg",
     "main.1515abda.css.map": "/attendenceportal_ui/static/css/main.1515abda.css.map",
-    "main.d8488821.js.map": "/attendenceportal_ui/static/js/main.d8488821.js.map",
+    "main.ca4fdc36.js.map": "/attendenceportal_ui/static/js/main.ca4fdc36.js.map",
     "787.074279c2.chunk.js.map": "/attendenceportal_ui/static/js/787.074279c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1515abda.css",
-    "static/js/main.d8488821.js"
+    "static/js/main.ca4fdc36.js"
   ]
 }
